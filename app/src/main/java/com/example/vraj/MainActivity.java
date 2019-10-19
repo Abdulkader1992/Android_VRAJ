@@ -2,12 +2,13 @@ package com.example.vraj;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
     Button btnAnmldenJ, btnSchlissenJ;
     TextView btreffJ;
@@ -17,13 +18,22 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        btnAnmldenJ = (Button)this.findViewById(R.id.btnAnmelden);
+        btnSchlissenJ = (Button)this.findViewById(R.id.btnSchlissen);
+        btreffJ = (TextView)this.findViewById(R.id.betreff);
+
+        btnAnmldenJ.setOnClickListener(this);
+        btnSchlissenJ.setOnClickListener(this);
+        btreffJ.setOnClickListener(this);
     }
-    protected void onClick(View v)
+    public void onClick(View v)
     {
         switch (v.getId())
         {
             case R.id.btnAnmelden:
                 // Anmelden
+                Intent intent = new Intent(MainActivity.this, Page1.class);
+                startActivity(intent);
                 break;
             case R.id.btnSchlissen:
                 finish();
