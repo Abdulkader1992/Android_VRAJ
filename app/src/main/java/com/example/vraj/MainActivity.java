@@ -32,9 +32,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             case R.id.btnAnmelden:
                 // Anmelden
-            //    Intent intent = new Intent(MainActivity.this, Page1.class);
-            //    MainActivity.startActivity(intent);
-                startActivity(new Intent(getApplicationContext(), Page1.class));
+                Intent intent = new Intent(getApplicationContext(), Page1.class);
+                startActivity(intent);
+               // startActivity(new Intent(getApplicationContext(), Page1.class));
                 break;
             case R.id.btnSchlissen:
                 finish();

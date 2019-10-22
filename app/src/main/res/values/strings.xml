@@ -3,4 +3,8 @@
     <string name="app_name">VRAJ</string>
     <string name="page_name">Registrierung</string>
     <string name="page_name1">Page1</string>
+    <string name="Page1">Page1</string>
+    <string name="Versicherung">Versicherung</string>
+    <string name="Zuruech">Zurück</string>
+    <string name="Kontakte">Kontakte</string>
 </resources>

@@ -16,7 +16,7 @@ public class Page1 extends AppCompatActivity implements View.OnClickListener {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.page1);
         btnAnmldenJ1 = (Button) this.findViewById(R.id.btnAnmelden);
         btnSchlissenJ1 = (Button) this.findViewById(R.id.btnSchlissen);
         btreffJ1 = (TextView) this.findViewById(R.id.betreff);
