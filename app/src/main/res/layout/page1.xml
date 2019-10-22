@@ -17,7 +17,8 @@
         android:text="@string/page_name1"
         android:textColor="#000"
         android:textSize="30sp" />
-    <!--Anmelden Button-->
+
+                                                        <!--Anmelden Button-->
     <Button android:id="@+id/btnAnmelden"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
