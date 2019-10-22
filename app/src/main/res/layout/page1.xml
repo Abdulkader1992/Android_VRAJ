@@ -21,7 +21,7 @@
     <Button android:id="@+id/btnAnmelden"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Versicherungen"
+        android:text="(Versicherungen)"
         android:textAllCaps="false"
         android:layout_marginTop="316dp"
         android:textSize="26dp"
