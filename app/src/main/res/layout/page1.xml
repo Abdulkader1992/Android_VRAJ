@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="316dp"
         android:background="@android:color/darker_gray"
-        android:text="@string/Versicherung"
+        android:text="@string/MeldungÜberprufen"
         android:textAllCaps="false"
         android:textSize="26sp" />
     <!--Schlissen Button-->

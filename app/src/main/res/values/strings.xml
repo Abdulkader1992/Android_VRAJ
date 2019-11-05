@@ -2,9 +2,9 @@
     <string name="vraj">VRAJ</string>
     <string name="app_name">VRAJ</string>
     <string name="page_name1">Page1</string>
-    <string name="Page1">Page1</string>
-    <string name="Versicherung">Versicherung</string>
     <string name="Zuruech">Zurück</string>
     <string name="Kontakte">Kontakte</string>
     <string name="page_name">VRAJ</string>
+    <string name="Page1">Anmeldung</string>
+    <string name="MeldungÜberprufen">Sind Sie angemeldet?</string>
 </resources>

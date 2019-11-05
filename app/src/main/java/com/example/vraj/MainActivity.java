@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
-    Button btnAnmldenJ, btnSchlissenJ;
+    Button btnAnmldenJ, btnSchlissenJ, ohneAnmelungfortfahrenJ;
     TextView btreffJ;
 
     @Override
@@ -21,10 +21,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnAnmldenJ = (Button)this.findViewById(R.id.btnAnmelden);
         btnSchlissenJ = (Button)this.findViewById(R.id.btnSchlissen);
         btreffJ = (TextView)this.findViewById(R.id.betreff);
+        ohneAnmelungfortfahrenJ = (Button)this.findViewById(R.id.ohneAnmelungfortfahren);
 
         btnAnmldenJ.setOnClickListener(this);
         btnSchlissenJ.setOnClickListener(this);
         btreffJ.setOnClickListener(this);
+        ohneAnmelungfortfahrenJ.setOnClickListener(this);
     }
     public void onClick(View v)
     {
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.ohneAnmelungfortfahren:
-                Intent intent1 = new Intent(getApplicationContext(), leistungen.class);
+                Intent intent1 = new Intent(getApplicationContext(), Leistungen.class);
                 startActivity(intent1);
                 break;
 
