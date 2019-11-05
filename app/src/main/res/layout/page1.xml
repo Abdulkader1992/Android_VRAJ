@@ -20,7 +20,7 @@
         android:textSize="30sp"
         tools:text="@string/Page1" />
 
-                                                        <!--Anmelden Button-->
+    <!--Anmelden Button-->
     <Button
         android:id="@+id/btnAnmelden"
         android:layout_width="match_parent"

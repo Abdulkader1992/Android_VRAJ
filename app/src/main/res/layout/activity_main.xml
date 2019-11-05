@@ -28,7 +28,7 @@
         android:background="@android:color/darker_gray"
         android:layout_below="@+id/betreff"
         android:layout_marginTop="250dp"/>
-                                                                                <!--Schlissen Button-->
+                                                                                <!--Schliessen Button-->
     <Button android:id="@+id/btnSchlissen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,6 +40,16 @@
         android:layout_below="@+id/btnAnmelden"
         />
                                                                                 <!--Fusszeile Button-->
+    <Button
+        android:id="@+id/ohneAnmelungfortfahren"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_marginTop="5dp"
+        android:textSize="26dp"
+        android:background="@android:color/darker_gray"
+        android:text="Ohne Anmeldung fortfahren" />
+
     <Button android:id="@+id/btnFusszeile"
         android:layout_width="270dp"
         android:layout_height="wrap_content"
@@ -48,4 +58,5 @@
         android:layout_marginTop="10dp"
         android:layout_below="@+id/btnSchlissen"
         />
-    </LinearLayout>
+
+</LinearLayout>

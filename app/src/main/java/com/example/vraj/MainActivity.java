@@ -36,6 +36,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 // startActivity(new Intent(getApplicationContext(), Page1.class));
                 break;
+
+            case R.id.ohneAnmelungfortfahren:
+                Intent intent1 = new Intent(getApplicationContext(), leistungen.class);
+                startActivity(intent1);
+                break;
+
             case R.id.btnSchlissen:
                 finish();
                 break;
