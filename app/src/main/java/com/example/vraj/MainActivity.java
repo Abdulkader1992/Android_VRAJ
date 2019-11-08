@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnAnmldenJ = (Button)this.findViewById(R.id.btnAnmelden);
-        btnSchlissenJ = (Button)this.findViewById(R.id.btnSchlissen);
+        btnAnmldenJ = (Button)this.findViewById(R.id.btnAnmeldenFrage);
+        btnSchlissenJ = (Button)this.findViewById(R.id.btnJa);
         btreffJ = (TextView)this.findViewById(R.id.betreff);
         ohneAnmelungfortfahrenJ = (Button)this.findViewById(R.id.ohneAnmelungfortfahren);
 
@@ -32,11 +32,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     {
         switch (v.getId())
         {
-            case R.id.btnAnmelden:
+            case R.id.btnAnmeldenFrage:
                 // Anmelden
-                Intent intent = new Intent(getApplicationContext(), Page1.class);
+                Intent intent = new Intent(getApplicationContext(), Startseite.class);
                 startActivity(intent);
-                // startActivity(new Intent(getApplicationContext(), Page1.class));
                 break;
 
             case R.id.ohneAnmelungfortfahren:
@@ -44,10 +43,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent1);
                 break;
 
-            case R.id.btnSchlissen:
+            case R.id.btnJa:
                 finish();
                 break;
-            case R.id.btnFusszeile:
+            case R.id.btnNein:
                 //Konrakte
                 break;
                 //Alternative

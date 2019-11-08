@@ -19,7 +19,7 @@
         android:textColor="#000"
         android:textSize="30sp" />
         <!-- test -->                                                                        <!--Anmelden Button-->
-    <Button android:id="@+id/btnAnmelden"
+    <Button android:id="@+id/btnAnmeldenFrage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Anmelden"
@@ -29,7 +29,7 @@
         android:layout_below="@+id/betreff"
         android:layout_marginTop="250dp"/>
                                                                                 <!--Schliessen Button-->
-    <Button android:id="@+id/btnSchlissen"
+    <Button android:id="@+id/btnJa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Schließen"
@@ -37,7 +37,7 @@
         android:layout_marginTop="5dp"
         android:textSize="26dp"
         android:background="@android:color/darker_gray"
-        android:layout_below="@+id/btnAnmelden"
+        android:layout_below="@+id/btnAnmeldenFrage"
         />
                                                                                 <!--Fusszeile Button-->
     <Button
@@ -50,13 +50,13 @@
         android:background="@android:color/darker_gray"
         android:text="Ohne Anmeldung fortfahren" />
 
-    <Button android:id="@+id/btnFusszeile"
+    <Button android:id="@+id/btnNein"
         android:layout_width="270dp"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="Kontakt"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/btnSchlissen"
+        android:layout_below="@+id/btnJa"
         />
 
 </LinearLayout>

@@ -1,6 +1,5 @@
 package com.example.vraj;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,8 +16,8 @@ public class Leistungen extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.leistungen);
-        btnAnmldenJ1 = (Button) this.findViewById(R.id.btnAnmelden);
-        btnSchlissenJ1 = (Button) this.findViewById(R.id.btnSchlissen);
+        btnAnmldenJ1 = (Button) this.findViewById(R.id.btnAnmeldenFrage);
+        btnSchlissenJ1 = (Button) this.findViewById(R.id.btnJa);
         btreffJ1 = (TextView) this.findViewById(R.id.betreff);
 
         btnAnmldenJ1.setOnClickListener(this);
@@ -28,12 +27,12 @@ public class Leistungen extends AppCompatActivity implements View.OnClickListene
 
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btnAnmelden:
+            case R.id.btnAnmeldenFrage:
 
-            case R.id.btnSchlissen:
+            case R.id.btnJa:
                 finish();
                 break;
-            case R.id.btnFusszeile:
+            case R.id.btnNein:
                 //Kontakte
                 break;
             //Alternative

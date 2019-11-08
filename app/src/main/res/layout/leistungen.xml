@@ -17,7 +17,7 @@
         android:background="@color/colorPrimary"
         android:textColor="#000"/>
     <!--Anmelden Button-->
-    <Button android:id="@+id/btnAnmelden"
+    <Button android:id="@+id/btnAnmeldenFrage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Anmelden"
@@ -26,7 +26,7 @@
         android:textSize="26dp"
         android:background="@android:color/darker_gray"/>
     <!--Schlissen Button-->
-    <Button android:id="@+id/btnSchlissen"
+    <Button android:id="@+id/btnJa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Schließen"

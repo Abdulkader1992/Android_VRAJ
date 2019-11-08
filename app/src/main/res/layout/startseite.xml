@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:id="@+id/betreff"
+        android:layout_width="200dp"
+        android:layout_height="66dp"
+        android:background="@drawable/bg"
+        android:gravity="center"
+        android:text="@string/page_name1"
+        android:textColor="#000"
+        android:textSize="30sp"
+        tools:text="@string/Page1" />
+
+    <!--Anmelden Button-->
+    <TextView
+        android:id="@+id/btnAnmeldenFrage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="316dp"
+        android:background="@android:color/darker_gray"
+        android:text="@string/MeldungÜberprufen"
+        android:textAllCaps="false"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:textColor="#000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+    <!--Schlissen Button-->
+
+        <!--Fusszeile Button-->
+
+        <Button
+            android:id="@+id/btnJa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/darker_gray"
+            android:text="@string/Zuruech"
+            android:textAllCaps="false"
+            android:textSize="26sp" />
+
+        <Button
+        android:id="@+id/btnNein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@android:color/darker_gray"
+        android:text="@string/Kontakte"
+        android:textAllCaps="false"
+        android:textSize="26sp"/>
+     </LinearLayout>
+
+</LinearLayout>
