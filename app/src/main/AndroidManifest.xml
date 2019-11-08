@@ -19,6 +19,7 @@
         <activity android:name=".Leistungen"></activity>
         <activity android:name=".Startseite"></activity>
         <activity android:name=".AnmeldungsSeite"></activity>
+
     </application>
 
 </manifest>

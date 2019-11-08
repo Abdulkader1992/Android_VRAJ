@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnJa:
                 finish();
                 break;
-            case R.id.btnNein:
+            case R.id.btnPass:
                 //Konrakte
                 break;
                 //Alternative

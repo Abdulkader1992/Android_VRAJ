@@ -19,8 +19,8 @@
         android:textSize="30sp"
         tools:text="@string/Page1" />
 
-    <!--Anmelden Button-->
     <TextView
+        android:id="@+id/anmeldungBetreff"
         android:layout_width="wrap_content"
         android:layout_height="66dp"
         android:layout_marginTop="316dp"
@@ -32,7 +32,7 @@
 
 
     <EditText
-        android:id="@+id/btnJa"
+        android:id="@+id/ediUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -43,13 +43,24 @@
         android:textSize="26sp" />
 
     <EditText
-        android:id="@+id/btnNein"
-        android:layout_width="wrap_content"
+        android:id="@+id/ediPass"
+        android:layout_width="match_parent"
+        android:gravity="center"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:background="@android:color/darker_gray"
         android:text="@string/Pass"
         android:textAllCaps="false"
+        android:textSize="26sp"/>
+
+    <Button
+        android:id="@+id/btnSpeichern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/Speicehrn"
+        android:textAllCaps="false"
+        android:textSize="26sp"/>
 
 </LinearLayout>

@@ -32,7 +32,7 @@ public class Leistungen extends AppCompatActivity implements View.OnClickListene
             case R.id.btnJa:
                 finish();
                 break;
-            case R.id.btnNein:
+            case R.id.btnPass:
                 //Kontakte
                 break;
             //Alternative

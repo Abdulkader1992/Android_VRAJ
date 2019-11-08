@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AnmeldungsSeite extends AppCompatActivity {
+public class AnmeldungsSeite extends AppCompatActivity implements View.OnClickListener {
 
     Button btnJaJ, btnNeinJ;
     TextView btnAnmldenFrageJ;
@@ -19,7 +19,7 @@ public class AnmeldungsSeite extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.anmedungsseite);
         btnJaJ = (Button) this.findViewById(R.id.btnJa);
-        btnNeinJ = (Button) this.findViewById(R.id.btnNein);
+        btnNeinJ = (Button) this.findViewById(R.id.btnPass);
         btnAnmldenFrageJ = (TextView) this.findViewById(R.id.btnAnmeldenFrage);
 
         btnJaJ.setOnClickListener(this);
@@ -34,7 +34,7 @@ public class AnmeldungsSeite extends AppCompatActivity {
                 Intent intentJa = new Intent(getApplicationContext(), AnmeldungsSeite.class);
                 startActivity(intentJa);
                 break;
-            case R.id.btnNein:
+            case R.id.btnPass:
                 Intent intentNein = new Intent(getApplicationContext(), NeuAnmeldungsseite.class);
                 startActivity(intentNein);
                 break;

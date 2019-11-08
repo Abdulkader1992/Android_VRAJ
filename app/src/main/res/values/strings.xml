@@ -9,5 +9,7 @@
     <string name="Anmeldung" translatable="false">Anmeldung</string>
     <string name="TextUser" translatable="false">username</string>
     <string name="Pass">kennwort</string>
-    <string name="Eingabe" translatable="false">Geben Sie Ihr Benutzername und Kennwort</string>
+    <string name="Eingabe" translatable="false">Geben Sie Ihr Benutzername und Kennwort ein</string>
+    <string name="Speicehrn" translatable="false">Speicehrn</string>
+    <string name="Startseite">Startseite</string>
 </resources>

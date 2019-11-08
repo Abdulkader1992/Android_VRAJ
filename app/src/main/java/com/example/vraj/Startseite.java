@@ -33,7 +33,7 @@ public class Startseite extends AppCompatActivity implements View.OnClickListene
                 Intent intentJa = new Intent(getApplicationContext(), AnmeldungsSeite.class);
                 startActivity(intentJa);
                 break;
-            case R.id.btnNein:
+            case R.id.btnPass:
                 Intent intentNein = new Intent(getApplicationContext(), NeuAnmeldungsseite.class);
                 startActivity(intentNein);
                 break;

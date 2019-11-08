@@ -15,10 +15,10 @@
         android:layout_height="66dp"
         android:background="@drawable/bg"
         android:gravity="center"
-        android:text="@string/page_name1"
+        android:text="@string/Startseite"
         android:textColor="#000"
         android:textSize="30sp"
-        tools:text="@string/Page1" />
+        tools:text="@string/Startseite" />
 
     <!--Anmelden Button-->
     <TextView
