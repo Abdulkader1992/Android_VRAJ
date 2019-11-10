@@ -6,57 +6,74 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     android:gravity="center"
-    android:background="@drawable/bg">
+    android:background="#fff">
 
     <TextView
         android:id="@+id/betreff"
         android:layout_width="200dp"
         android:layout_height="66dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/bg"
         android:gravity="center"
-        android:text="@string/page_name"
         android:textColor="#000"
-        android:textSize="30sp" />
-        <!-- test -->                                                                        <!--Anmelden Button-->
-    <Button android:id="@+id/btnAnmeldenFrage"
+        android:textSize="40sp"
+        android:text="VRAJ"
+        android:layout_marginBottom="60dp"/>
+    
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Anmelden"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="200dp"
+            android:background="@drawable/bg1"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/bg2"/>
+    </LinearLayout>
+
+                                        <!--Anmelden Button-->
+    <Button android:id="@+id/btnSingIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zur Anmeldung"
         android:textAllCaps="false"
+        android:layout_marginTop="40dp"
         android:textSize="26dp"
-        android:background="@android:color/darker_gray"
-        android:layout_below="@+id/betreff"
-        android:layout_marginTop="250dp"/>
-                                                                                <!--Schliessen Button-->
-    <Button android:id="@+id/btnJa"
+        android:textStyle="italic"
+        android:background="@android:color/darker_gray"/>
+
+    <Button
+        android:id="@+id/btnWithoutSingIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Schließen"
         android:textAllCaps="false"
         android:layout_marginTop="5dp"
         android:textSize="26dp"
+        android:textStyle="italic"
         android:background="@android:color/darker_gray"
-        android:layout_below="@+id/btnAnmeldenFrage"
+        android:text="Ohne Anmeldung fortfahren"/>
+                                                                                <!--Schliessen Button-->
+    <Button android:id="@+id/btnClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="App beenden"
+        android:textAllCaps="false"
+        android:layout_marginTop="5dp"
+        android:textSize="26dp"
+        android:textStyle="italic"
+        android:background="@android:color/darker_gray"
         />
                                                                                 <!--Fusszeile Button-->
-    <Button
-        android:id="@+id/ohneAnmelungfortfahren"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:layout_marginTop="5dp"
-        android:textSize="26dp"
-        android:background="@android:color/darker_gray"
-        android:text="Ohne Anmeldung fortfahren" />
 
-    <Button android:id="@+id/btnPass"
+    <Button android:id="@+id/btnWe"
         android:layout_width="270dp"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="Kontakt"
+        android:text="Über uns"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/btnJa"
         />
 
 </LinearLayout>

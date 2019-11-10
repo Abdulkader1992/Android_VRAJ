@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
-    Button btnAnmldenJ, btnSchlissenJ, ohneAnmelungfortfahrenJ;
+    Button btnAnmldenJ, btnSchlissenJ, ohneAnmelungfortfahrenJ, btnKontaktJ;
     TextView btreffJ;
 
     @Override
@@ -18,38 +18,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnAnmldenJ = (Button)this.findViewById(R.id.btnAnmeldenFrage);
-        btnSchlissenJ = (Button)this.findViewById(R.id.btnJa);
+        btnAnmldenJ = (Button)this.findViewById(R.id.btnSingIn);
+        btnSchlissenJ = (Button)this.findViewById(R.id.btnClose);
         btreffJ = (TextView)this.findViewById(R.id.betreff);
-        ohneAnmelungfortfahrenJ = (Button)this.findViewById(R.id.ohneAnmelungfortfahren);
+        ohneAnmelungfortfahrenJ = (Button)this.findViewById(R.id.btnWithoutSingIn);
+        btnKontaktJ = (Button)this.findViewById(R.id.btnWe);
 
         btnAnmldenJ.setOnClickListener(this);
         btnSchlissenJ.setOnClickListener(this);
         btreffJ.setOnClickListener(this);
         ohneAnmelungfortfahrenJ.setOnClickListener(this);
+        btnKontaktJ.setOnClickListener(this);
     }
     public void onClick(View v)
     {
         switch (v.getId())
         {
-            case R.id.btnAnmeldenFrage:
-                // Anmelden
+            case R.id.btnSingIn:
+                                                        // Anmeldung Button
                 Intent intent = new Intent(getApplicationContext(), Startseite.class);
                 startActivity(intent);
                 break;
 
-            case R.id.ohneAnmelungfortfahren:
-                Intent intent1 = new Intent(getApplicationContext(), Leistungen.class);
-                startActivity(intent1);
+            case R.id.btnWithoutSingIn:
+                                                        // Ohne Anmeldung Button
                 break;
 
-            case R.id.btnJa:
-                finish();
+            case R.id.btnClose:
+                                                        // App beenden Button
+                System.exit(0);
                 break;
-            case R.id.btnPass:
-                //Konrakte
+            case R.id.btnWe:
+                                                        // Konrakte Button
                 break;
-                //Alternative
+                                                        // Alternative
         }
     }
 }

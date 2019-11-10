@@ -1,15 +1,1 @@
-<resources>
-    <string name="vraj">VRAJ</string>
-    <string name="app_name">VRAJ</string>
-    <string name="page_name">VRAJ</string>
-    <string name="Page1">Anmeldung</string>
-    <string name="MeldungÜberprufen">Sind Sie angemeldet?</string>
-    <string name="Zuruech">Ja</string>
-    <string name="Kontakte">nein</string>
-    <string name="Anmeldung" translatable="false">Anmeldung</string>
-    <string name="TextUser" translatable="false">username</string>
-    <string name="Pass">kennwort</string>
-    <string name="Eingabe" translatable="false">Geben Sie Ihr Benutzername und Kennwort ein</string>
-    <string name="Speicehrn" translatable="false">Speicehrn</string>
-    <string name="Startseite">Startseite</string>
-</resources>
+<resources></resources>

@@ -1,44 +1,47 @@
 package com.example.vraj;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class AnmeldungsSeite extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnJaJ, btnNeinJ;
-    TextView btnAnmldenFrageJ;
+    EditText userJ, passJ;
+    TextView editAskJ;
+    Button nextJ;
 
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.anmedungsseite);
-        btnJaJ = (Button) this.findViewById(R.id.btnJa);
-        btnNeinJ = (Button) this.findViewById(R.id.btnPass);
-        btnAnmldenFrageJ = (TextView) this.findViewById(R.id.btnAnmeldenFrage);
+        userJ = (EditText) this.findViewById(R.id.ediUser);
+        passJ = (EditText) this.findViewById(R.id.ediPass);
+        editAskJ = (TextView) this.findViewById(R.id.anmeldungEingabe);
+        nextJ = (Button) this.findViewById(R.id.next);
 
-        btnJaJ.setOnClickListener(this);
-        btnNeinJ.setOnClickListener(this);
-        btnAnmldenFrageJ.setOnClickListener(this);
+        userJ.setOnClickListener(this);
+        passJ.setOnClickListener(this);
+        editAskJ.setOnClickListener(this);
+        nextJ.setOnClickListener(this);
     }
 
     public void onClick(View v) {
         switch (v.getId())
         {
-            case R.id.btnJa:
-                Intent intentJa = new Intent(getApplicationContext(), AnmeldungsSeite.class);
-                startActivity(intentJa);
+            case R.id.ediUser:
+
                 break;
-            case R.id.btnPass:
-                Intent intentNein = new Intent(getApplicationContext(), NeuAnmeldungsseite.class);
-                startActivity(intentNein);
+            case R.id.ediPass:
+
                 break;
-            //Alternative
+            case R.id.next:
+
+                break;
         }
     }
 }
