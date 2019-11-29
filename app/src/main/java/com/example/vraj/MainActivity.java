@@ -8,8 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference reference = database.getReference();
     Button btnAnmldenJ, btnSchlissenJ, ohneAnmelungfortfahrenJ, btnKontaktJ;
     TextView btreffJ;
 

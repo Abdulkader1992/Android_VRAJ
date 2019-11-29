@@ -21,7 +21,7 @@ public class AnmeldungsSeite extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.anmedungsseite);
         userJ = (EditText) this.findViewById(R.id.ediUser);
         passJ = (EditText) this.findViewById(R.id.ediPass);
-        editAskJ = (TextView) this.findViewById(R.id.anmeldungEingabe);
+        editAskJ = (TextView) this.findViewById(R.id.userEingabe);
         nextJ = (Button) this.findViewById(R.id.next);
 
         userJ.setOnClickListener(this);

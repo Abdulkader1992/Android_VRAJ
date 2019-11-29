@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "156012070512",
+    "firebase_url": "https://vraj-db.firebaseio.com",
+    "project_id": "vraj-db",
+    "storage_bucket": "vraj-db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156012070512:android:cfa4960ca1ed433906d6b5",
+        "android_client_info": {
+          "package_name": "com.example.vraj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156012070512-88k45g72k06a0b6lchdgt9i0svrukjct.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnz3kOU8MHqGZVqV93NMVRS-vuNFleof0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156012070512-88k45g72k06a0b6lchdgt9i0svrukjct.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
