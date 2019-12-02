@@ -1,17 +1,18 @@
 package com.example.vraj;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener
+
+public class BedienungActivity extends AppCompatActivity implements View.OnClickListener
 {
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference reference = database.getReference();
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.bedienung);
         btnAnmldenJ = (Button)this.findViewById(R.id.btnSingIn);
         btnSchlissenJ = (Button)this.findViewById(R.id.btnClose);
         btreffJ = (TextView)this.findViewById(R.id.betreff);
@@ -45,17 +46,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btnWithoutSingIn:
-                                                        // Ohne Anmeldung Button
+                // Ohne Anmeldung Button
                 break;
 
             case R.id.btnClose:
-                                                        // App beenden Button
+                // App beenden Button
                 finish();
                 break;
             case R.id.btnWe:
-                                                        // Konrakte Button
+                // Konrakte Button
                 break;
-                                                        // Alternative
+            // Alternative
         }
     }
 }
