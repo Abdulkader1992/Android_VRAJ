@@ -45,7 +45,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btnWithoutSingIn:
-                                                        // Ohne Anmeldung Button
+                Intent leistungsauswahlintent = new Intent(getApplicationContext(), LeistungActivity.class);
+                startActivity(leistungsauswahlintent);                                      // Ohne Anmeldung Button
                 break;
 
             case R.id.btnClose:
