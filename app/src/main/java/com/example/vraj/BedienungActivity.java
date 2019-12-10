@@ -35,6 +35,7 @@ public class BedienungActivity extends AppCompatActivity implements View.OnClick
         btreffJ.setOnClickListener(this);
         ohneAnmelungfortfahrenJ.setOnClickListener(this);
         btnKontaktJ.setOnClickListener(this);
+
     }
     public void onClick(View v)
     {
