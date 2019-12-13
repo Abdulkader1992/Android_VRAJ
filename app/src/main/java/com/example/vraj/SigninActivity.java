@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -84,7 +83,8 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
                                     if (task.isSuccessful()) {
                                         Toast.makeText(SigninActivity.this, "Richtig", Toast.LENGTH_SHORT).show();
                                         dialog.dismiss();
-
+                                        Intent leistungsauswahlintent = new Intent(getApplicationContext(), LeistungActivity.class);
+                                        startActivity(leistungsauswahlintent);
 
                                     } else {
                                         Toast.makeText(SigninActivity.this, "Ihr Konto oder Kennwort ist nicht korrekt.", Toast.LENGTH_SHORT).show();
