@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LeistungActivity extends AppCompatActivity implements View.OnClickListener
 {
-    Button Vergleichbtn, Kreditbtn, Versicherungbtn;
+    Button Kreditbtn, Versicherungbtn;
 
  @Override
     protected void onCreate(Bundle savedInstanceState)
