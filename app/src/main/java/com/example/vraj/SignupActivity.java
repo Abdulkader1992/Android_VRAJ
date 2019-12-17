@@ -17,7 +17,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-@SuppressWarnings("deprecation")
+@SuppressWarnings("deprecation")//
 public class SignupActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText userJ, passJ, passJ2;
