@@ -1,1 +1,15 @@
-<resources></resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="app_name">MyAndroidApp</string>
+<string name="country_prompt">Choose a country</string>
+
+<string-array name="country_arrays">
+    <item>Ihre Auswahl</item>
+    <item>Huawei</item>
+    <item>IPhon</item>
+    <item>Samsung</item>
+
+</string-array>
+
+</resources>
