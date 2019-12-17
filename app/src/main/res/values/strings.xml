@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-<string name="app_name">MyAndroidApp</string>
-<string name="country_prompt">Choose a country</string>
+<string name="app_name">VRAJ</string>
+<string name="country_prompt">Wählen Sie Ihr Handymarkt aus</string>
 
-<string-array name="country_arrays">
+<string-array name="versicherung_arrays">
     <item>Ihre Auswahl</item>
     <item>Huawei</item>
-    <item>IPhon</item>
+    <item>IPhone</item>
     <item>Samsung</item>
 
 </string-array>
+
 
 </resources>

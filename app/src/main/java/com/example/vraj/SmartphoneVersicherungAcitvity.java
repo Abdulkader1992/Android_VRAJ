@@ -9,7 +9,7 @@ public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements
 
         protected void onCreate(Bundle savedInstanceState){
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.smartphone);
+            setContentView(R.layout.smartphonversicherung);
         }
         public void onClick(View v) {
 

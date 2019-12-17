@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-<LinearLayout
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:layout_gravity="center"
-    android:gravity="center"
-    android:background="#fff">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="MissingDefaultResource">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="#fff">
 
-         <LinearLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -31,9 +34,10 @@
             <Spinner
                 android:id="@+id/spinner1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:entries="@array/country_arrays"
-                android:prompt="@string/country_prompt"/>
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:background="#ccc"
+                android:entries="@array/versicherung_arrays"/>
         </LinearLayout>
-</LinearLayout>
+    </LinearLayout>
 </ScrollView>
