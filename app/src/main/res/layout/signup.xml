@@ -57,6 +57,7 @@
 
         <EditText
             android:id="@+id/ediPass"
+            android:inputType="textPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -76,12 +77,13 @@
 
         <EditText
             android:id="@+id/ediPass2"
+            android:inputType="textPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:ems="30"
-            android:hint="re-password" />
+            android:hint="re-password"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -104,7 +106,7 @@
                 style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
+                android:layout_marginStart="170dp"
                 android:text="Weiter"
                 android:textAllCaps="false"
                 android:layout_below="@+id/editText5"

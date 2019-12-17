@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
@@ -15,7 +14,7 @@
         android:gravity="center"
         android:textColor="#000"
         android:textSize="40sp"
-        android:text="Sign in"
+        android:text="Anmeldung"
         android:layout_marginBottom="60dp"
         android:layout_marginTop="60dp"
         android:background="#eee"/>
@@ -56,6 +55,7 @@
 
         <EditText
             android:id="@+id/ediPass1"
+            android:inputType="textPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -91,6 +91,11 @@
                 android:layout_alignEnd="@+id/editText5"
                 android:enabled="true" />
         </LinearLayout>
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/neuKonto"

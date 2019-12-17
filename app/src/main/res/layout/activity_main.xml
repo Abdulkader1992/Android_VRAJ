@@ -46,7 +46,7 @@
         android:text="Zur Anmeldung"
         android:textAllCaps="false"
         android:textSize="26dp"
-        android:background="#eee"/>
+        android:background="#7EE0F1"/>
 
     <Button
         android:id="@+id/btnWithoutSingIn"
@@ -55,7 +55,7 @@
         android:textAllCaps="false"
         android:layout_marginTop="5dp"
         android:textSize="26dp"
-        android:background="#ccc"
+        android:background="#00BCD4"
         android:text="Ohne Anmeldung fortfahren"/>
                                                                                 <!--Schliessen Button-->
     <Button android:id="@+id/btnClose"
@@ -65,7 +65,7 @@
         android:textAllCaps="false"
         android:layout_marginTop="5dp"
         android:textSize="26dp"
-        android:background="#bbb"/>
+        android:background="#08798D"/>
                                                                                 <!--Fusszeile Button-->
 
     <Button android:id="@+id/btnWe"

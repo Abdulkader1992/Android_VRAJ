@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -52,6 +53,14 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
          password = passEingabe.getText().toString().trim();
 
     }
+    void singInGoogle()
+    {
+        // Konfiguration Google Sign In
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+    }
     public void onClick(View v) {
         switch (v.getId())
         {
@@ -84,7 +93,8 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
                                     if (task.isSuccessful()) {
                                         Toast.makeText(SigninActivity.this, "Richtig", Toast.LENGTH_SHORT).show();
                                         dialog.dismiss();
-
+                                        Intent leistungsauswahlintent = new Intent(getApplicationContext(), LeistungActivity.class);
+                                        startActivity(leistungsauswahlintent);
 
                                     } else {
                                         Toast.makeText(SigninActivity.this, "Ihr Konto oder Kennwort ist nicht korrekt.", Toast.LENGTH_SHORT).show();
