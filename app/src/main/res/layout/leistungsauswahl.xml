@@ -27,7 +27,8 @@
         android:gravity="center"
         android:textColor="#000"
         android:textSize="20dp"
-        android:text="Wählen Sie Ihre Gewünschte Leistung!"
+        android:textStyle="bold"
+        android:text="Wählen Sie Ihre gewünschte Leistung aus!"
         android:layout_marginBottom="60dp"
         android:background="#eee"/>
 
@@ -51,17 +52,19 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    <Button
-        android:id="@+id/Versicherung"
-        android:layout_width="210dp"
-        android:layout_height="wrap_content"
-        android:text="Smartphone Versicherung" />
+        android:layout_height="70dp">
 
-    <Button
-        android:id="@+id/Kredit"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Kredit" />
+        <Button
+            android:id="@+id/Versicherung"
+            android:layout_width="210dp"
+            android:layout_height="60dp"
+            android:text="Smartphone Versicherung" />
+
+        <Button
+            android:id="@+id/Kredit"
+            android:layout_marginTop="8dp"
+            android:layout_width="210dp"
+            android:layout_height="60dp"
+            android:text="Kredit" />
     </LinearLayout>
 </LinearLayout>
