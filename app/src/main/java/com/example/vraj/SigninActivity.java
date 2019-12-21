@@ -106,7 +106,6 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
                 break;
             case R.id.backB1:
                 finish();
-
                 break;
         }
     }

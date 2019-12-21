@@ -5,39 +5,128 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    tools:ignore="MissingDefaultResource">
+    tools:ignore="MissingDefaultResource"
+    android:background="#fff">
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_gravity="center"
         android:gravity="center"
         android:background="#fff">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="horizontal">
+
             <ImageView
                 android:id="@+id/imageHandy"
                 android:layout_width="210dp"
                 android:layout_height="200dp"
-                android:background="@drawable/bg1"/>
+                android:background="@drawable/bg1" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:background="#eee">
+
+            <TextView
+                android:id="@+id/textHersteller"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:text="Hersteller"/>
+
             <Spinner
                 android:id="@+id/spinner1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="20dp"
-                android:background="#ccc"
-                android:entries="@array/versicherung_arrays"/>
+                style="?attr/spinnerDropDownItemStyle"
+                android:layout_width="350dp"
+                android:layout_height="?attr/dropdownListPreferredItemHeight"
+                android:background="@drawable/gradient_spinner"
+                android:ellipsize="marquee"
+                android:entries="@array/hersteller_arrays"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textAlter"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:text="Gerätealter"/>
+
+            <Spinner
+                android:id="@+id/spinner2"
+                style="?attr/spinnerDropDownItemStyle"
+                android:layout_width="350dp"
+                android:layout_height="?attr/dropdownListPreferredItemHeight"
+                android:background="@drawable/gradient_spinner"
+                android:ellipsize="marquee"
+                android:entries="@array/alter_arrays"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/textDiebstal"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:text="Diebstallschutz"/>
+
+            <Spinner
+                android:id="@+id/spinner3"
+                style="?attr/spinnerDropDownItemStyle"
+                android:layout_width="350dp"
+                android:layout_height="?attr/dropdownListPreferredItemHeight"
+                android:background="@drawable/gradient_spinner"
+                android:ellipsize="marquee"
+                android:entries="@array/diebstal_arrays"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_marginTop="30dp"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_button"
+                android:text="weiter"
+                android:textAllCaps="false"
+                android:textColor="#000"/>
+
         </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:text="Häufige Fragen: "/>
+
+        <TextView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="10dp"
+            android:text="- Welche Schäden deckt VRAJ-Versicehrung ab?
+                        \n- Bei wem melde ich einen Schaden?
+                        \n- Wie lange dauert die Bearbeitung eines Schadensfall?
+                        \n- Was ist zu beachten, wenn ich als versicherte Person nicht der Käufer des Handys bin?"/>
+        <Button
+            android:id="@+id/info"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="Informationen"
+            android:textAllCaps="false"
+            android:textColor="#000"/>
+
     </LinearLayout>
 </ScrollView>

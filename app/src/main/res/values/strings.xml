@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-<string name="app_name">VRAJ</string>
-<string name="country_prompt">Wählen Sie Ihr Handymarkt aus</string>
+    <string name="app_name">VRAJ</string>
+    <string name="country_prompt">Wählen Sie Ihr Handymarkt aus</string>
 
-<string-array name="versicherung_arrays">
-    <item>Ihre Auswahl</item>
-    <item>Huawei</item>
-    <item>IPhone</item>
-    <item>Samsung</item>
+    <string-array name="hersteller_arrays">
 
-</string-array>
+        <item>Huawei</item>
+        <item>IPhone</item>
+        <item>Samsung</item>
+
+    </string-array>
+
+    <string-array name="alter_arrays">
+
+        <item>ein Monat oder weniger</item>
+        <item>von 1 bis 6 Monate</item>
+        <item>mehr als 6 Monate</item>
+
+    </string-array>
+
+    <string-array name="diebstal_arrays">
+
+        <item>Ja</item>
+        <item>Nein</item>
+
+    </string-array>
 
 
 </resources>
