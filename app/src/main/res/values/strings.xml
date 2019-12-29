@@ -27,5 +27,15 @@
 
     </string-array>
 
+    <string-array name="kredit_arrays">
+        <item>1 Jahr</item>
+        <item>2 Jahre</item>
+        <item>3 Jahre</item>
+        <item>4 Jahre</item>
+        <item>5 Jahre</item>
+        <item>6 Jahre</item>
+        <item>7 Jahre</item>
+    </string-array>
+
 
 </resources>

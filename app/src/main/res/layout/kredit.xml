@@ -3,11 +3,68 @@
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center">
 
 <LinearLayout
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="#fff">
+
+        <TextView
+            android:id="@+id/kreditvolumen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bestimmen Sie Ihr Kreditvolumen"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="60dp"
+            android:background="#eee"/>
+
+        <EditText
+            android:id="@+id/kreditbetrag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/laufzeit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#eee"
+            android:text="Bestimmen Sie die Laufzeit"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="60dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerlaufzeit"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/kredit_arrays">
+
+        </Spinner>
+
+        <Button
+            android:id="@+id/abschicken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Abschicken" />
+
+    </LinearLayout>
 </LinearLayout>
 </ScrollView>

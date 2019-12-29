@@ -21,6 +21,7 @@
         <activity android:name=".LeistungActivity"></activity>
         <activity android:name=".SmartphoneVersicherungAcitvity"></activity>
         <activity android:name=".KreditActivity"></activity>
+        <activity android:name=".KreditauswertungActivity"></activity>
     </application>
 
 </manifest>
