@@ -78,7 +78,7 @@
                 android:layout_marginTop="10dp"
                 android:textColor="#000"
                 android:textSize="20sp"
-                android:text="Diebstallschutz"/>
+                android:text="Diebstahlschutz"/>
 
             <Spinner
                 android:id="@+id/spinner3"
@@ -87,8 +87,25 @@
                 android:layout_height="?attr/dropdownListPreferredItemHeight"
                 android:background="@drawable/gradient_spinner"
                 android:ellipsize="marquee"
-                android:entries="@array/diebstal_arrays"
+                android:entries="@array/diebstahl_arrays"
                 android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/preisFrage"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:text="Kaufpreis in €"/>
+
+            <EditText
+                android:id="@+id/preisEingabe"
+                android:layout_width="350dp"
+                android:layout_height="?attr/dropdownListPreferredItemHeight"
+                android:background="#fff"
+                android:textSize="20sp"
+                android:text="0"/>
 
             <Button
                 android:id="@+id/btnSubmit"
@@ -97,6 +114,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/gradient_button"
                 android:text="weiter"
+                android:textSize="20dp"
                 android:textAllCaps="false"
                 android:textColor="#000"/>
 
@@ -119,7 +137,8 @@
             android:text="- Welche Schäden deckt VRAJ-Versicehrung ab?
                         \n- Bei wem melde ich einen Schaden?
                         \n- Wie lange dauert die Bearbeitung eines Schadensfall?
-                        \n- Was ist zu beachten, wenn ich als versicherte Person nicht der Käufer des Handys bin?"/>
+                        \n- Was ist zu beachten, wenn ich als versicherte Person nicht der Käufer des Handys bin?
+                        \nDrücken Sie auf Informationen um die Antworten zu schauen"/>
         <Button
             android:id="@+id/info"
             android:layout_width="350dp"

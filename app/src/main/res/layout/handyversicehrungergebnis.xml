@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="MissingDefaultResource"
+    android:background="#fff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#fff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageHandy"
+                android:layout_width="210dp"
+                android:layout_height="200dp"
+                android:background="@drawable/bg1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#eee">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/view11"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="Hersteller: "/>
+
+                <TextView
+                    android:id="@+id/view12"
+
+                android:layout_marginBottom="20dp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:text="Ergebnis 1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/viewl2"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="Alter: "/>
+
+                <TextView
+                    android:id="@+id/view22"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="Ergebnis 2"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/view31"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="DsV: "/>
+
+                <TextView
+                    android:id="@+id/view32"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="Ergebnis 3"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/view41"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="Kaufpreis: "/>
+
+                <TextView
+                    android:id="@+id/view42"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="Ergebnis 4"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/view51"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="monatlich: "/>
+
+                <TextView
+                    android:id="@+id/view52"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="Ergebnis5: "/>
+
+                <TextView
+                    android:id="@+id/view53"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="€"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:text="Häufige Fragen: "/>
+
+        <TextView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="10dp"
+            android:text="- Welche Schäden deckt VRAJ-Versicehrung ab?
+                        \n- Bei wem melde ich einen Schaden?
+                        \n- Wie lange dauert die Bearbeitung eines Schadensfall?
+                        \n- Was ist zu beachten, wenn ich als versicherte Person nicht der Käufer des Handys bin?
+                        \nDrücken Sie auf Informationen um die Antworten zu schauen"/>
+        <Button
+            android:id="@+id/info1"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="Informationen"
+            android:textAllCaps="false"
+            android:textColor="#000"/>
+
+    </LinearLayout>
+</ScrollView>
