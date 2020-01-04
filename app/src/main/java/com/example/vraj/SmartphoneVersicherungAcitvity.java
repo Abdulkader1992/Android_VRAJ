@@ -257,6 +257,7 @@ public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements
     }
     public static String zahlungView()
     {
+        //VersicherungErgebnisse anzeigen
         float ergebnis = (Math.round(versicherung*100))/100;
         String zahl = new Float(ergebnis).toString();
         return zahl;
