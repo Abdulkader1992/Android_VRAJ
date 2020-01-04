@@ -19,7 +19,7 @@ public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements
     private static Spinner spinner3;
     private Button btnSubmitJ;
     private static EditText preisEingabe;
-    private static Double versicherung = 0.0;
+    private static Double versicherung;
 
 
     protected void onCreate(Bundle savedInstanceState)
@@ -106,14 +106,14 @@ public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements
         switch (v.getId())
         {
             case R.id.btnSubmit:
-                if(preis.matches("[0-9]+"))             // Eigabe überprüfen
-                {
-                    Toast.makeText(this, preis, Toast.LENGTH_SHORT).show();
-                }
-                else
-                {
-                    Toast.makeText(this, "Fehler bei der Eingabe bitte überprüfen Sie Ihre Eingabe", Toast.LENGTH_SHORT).show();
-                }
+          //      if(preis.matches("[0-9]+"))             // Eigabe überprüfen
+          //      {
+          //          Toast.makeText(this, preis, Toast.LENGTH_SHORT).show();
+          //      }
+          //      else
+          //      {
+          //          Toast.makeText(this, "Fehler bei der Eingabe bitte überprüfen Sie Ihre Eingabe", Toast.LENGTH_SHORT).show();
+          //      }
 
                 if (herstellerAuswahl() == 1) // HUAWEI ************************************
                 {
@@ -121,7 +121,7 @@ public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements
                     {
                         if(diebstahlAuswahl() == 1) // Diebstahl versichert (JA)
                         {
-                            versicherung = (preisZahl*(0.01))+ 1.5;    // Formel                                           §§§§§§§§§§§§§§§§§§§§§§§§§§
+                            versicherung = (preisZahl*(0.01))+ 2;    // Formel                                           §§§§§§§§§§§§§§§§§§§§§§§§§§
                         }
                         else if(diebstahlAuswahl() == 2) // Diebstahl nicht versichert (Nein)
                         {
@@ -132,7 +132,7 @@ public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements
                     {
                         if(diebstahlAuswahl() == 1) // Diebstahl versichert (JA)
                         {
-                            versicherung = (preisZahl*(0.012)) + 1.5;    // Formel                                          §§§§§§§§§§§§§§§§§§§§§§§§§§
+                            versicherung = (preisZahl*(0.012)) + 2;    // Formel                                          §§§§§§§§§§§§§§§§§§§§§§§§§§
                         }
                         else if(diebstahlAuswahl() == 2) // Diebstahl nicht versichert (Nein)
                         {
@@ -144,7 +144,7 @@ public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements
                     {
                         if(diebstahlAuswahl() == 1) //Diebstahl versichert (JA)
                         {
-                            versicherung = (preisZahl*(0.015)) + 1.5; // Formel                                             §§§§§§§§§§§§§§§§§§§§§§§§§§
+                            versicherung = (preisZahl*(0.015)) + 2; // Formel                                             §§§§§§§§§§§§§§§§§§§§§§§§§§
                         }
                         else if(diebstahlAuswahl() == 2) //Diebstahl nicht versicehrt (Nein)
                         {
@@ -257,9 +257,9 @@ public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements
     }
     public static String zahlungView()
     {
-        DecimalFormat twoDForm = new DecimalFormat("#.##");
-        Double zahl = Double.valueOf(twoDForm.format(versicherung));
-        return String.valueOf(zahl);
+        float ergebnis = (Math.round(versicherung*100))/100;
+        String zahl = new Float(ergebnis).toString();
+        return zahl;
     }
 }
 

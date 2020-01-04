@@ -101,6 +101,7 @@
 
             <EditText
                 android:id="@+id/preisEingabe"
+                android:inputType="numberDecimal"
                 android:layout_width="350dp"
                 android:layout_height="?attr/dropdownListPreferredItemHeight"
                 android:background="#fff"
@@ -109,6 +110,7 @@
 
             <Button
                 android:id="@+id/btnSubmit"
+
                 android:layout_marginTop="30dp"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"

@@ -16,8 +16,8 @@ public class LeistungActivity extends AppCompatActivity implements View.OnClickL
  {
      super.onCreate(savedInstanceState);
      setContentView(R.layout.leistungsauswahl);
-     Kreditbtn = (Button)this.findViewById(R.id.Kredit);
-     Versicherungbtn = (Button)this.findViewById(R.id.Versicherung);
+     Kreditbtn = (Button)this.findViewById(R.id.kredit);
+     Versicherungbtn = (Button)this.findViewById(R.id.versicherung);
 
      Kreditbtn.setOnClickListener(this);
      Versicherungbtn.setOnClickListener(this);
@@ -28,12 +28,12 @@ public class LeistungActivity extends AppCompatActivity implements View.OnClickL
 
         switch (v.getId())
         {
-            case R.id.Versicherung:                                        // Start der Smartphone Versicherungsvergleich
+            case R.id.versicherung:                                        // Start der Smartphone Versicherungsvergleich
                 Intent Smartphoneintent = new Intent(getApplicationContext(), SmartphoneVersicherungAcitvity.class);
                 startActivity(Smartphoneintent);
                 break;
 
-            case R.id.Kredit:                             // Start des KreditActivity Vergleichs
+            case R.id.kredit:                             // Start des KreditActivity Vergleichs
                 Intent Kreditintent = new Intent(getApplicationContext(), KreditActivity.class);
                 startActivity(Kreditintent);
                 break;
