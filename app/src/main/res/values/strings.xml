@@ -37,5 +37,10 @@
         <item>7 Jahre</item>
     </string-array>
 
+    <string-array name="tilgungsarten_arrays">
+        <item>Tilgungsdarlehnen</item>
+        <item>Annuitätendarlehnen</item>
+    </string-array>
+
 
 </resources>

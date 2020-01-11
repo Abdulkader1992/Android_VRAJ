@@ -23,6 +23,7 @@
         <activity android:name=".KreditActivity"></activity>
         <activity android:name=".HandyVersicherungErgebnisActivity"></activity>
         <activity android:name=".KreditauswertungActivity"></activity>
+        <activity android:name=".TilgungsPlanActivity"></activity>
     </application>
 
 </manifest>

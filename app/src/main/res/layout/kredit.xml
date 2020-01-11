@@ -59,6 +59,27 @@
 
         </Spinner>
 
+        <TextView
+            android:id="@+id/tilgungsformtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#eee"
+            android:text="Wählen Sie Ihre Tilgunsart"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="60dp"/>
+
+        <Spinner
+            android:id="@+id/tilgungsform"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/tilgungsarten_arrays">
+
+        </Spinner>
+
         <Button
             android:id="@+id/abschicken"
             android:layout_width="wrap_content"

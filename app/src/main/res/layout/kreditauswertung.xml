@@ -1,6 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-</LinearLayout>
+<ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="MissingDefaultResource"
+    android:background="#fff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#fff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageHandy"
+                android:layout_width="210dp"
+                android:layout_height="200dp"
+                android:background="@drawable/bg2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#eee">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/kreditsummetext"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="Kreditsumme: "/>
+
+                <TextView
+                    android:id="@+id/kreditsumme"
+
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="Ergebnis 1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/prozenttext"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="Jährlicher Prozentsatz: "/>
+
+                <TextView
+                    android:id="@+id/prozent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="Ergebnis 2"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/persönlicheLaufzeittext"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="Laufzeit: "/>
+
+                <TextView
+                    android:id="@+id/persönlicheLaufzeit"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="Ergebnis 3"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/ratentext"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/rate"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="Ergebnis 4"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/tilgungsplan"
+                    style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tilgungsplan \n erstellen"
+                    android:textAllCaps="false"
+                    android:layout_below="@+id/editText5"
+                    android:layout_alignEnd="@+id/editText5"
+                    android:enabled="true" />
+            </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+</ScrollView>

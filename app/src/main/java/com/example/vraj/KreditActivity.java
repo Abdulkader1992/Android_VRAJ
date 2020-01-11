@@ -15,6 +15,7 @@ public class KreditActivity extends AppCompatActivity implements View.OnClickLis
 
     Button abschickenbtn;
     Spinner laufzeitspinner;
+    Spinner tilgungsartspinner;
     EditText kreditbetragview;
 
     protected void onCreate(Bundle savedInstanceState){
@@ -22,54 +23,57 @@ public class KreditActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.kredit);
         abschickenbtn = (Button)this.findViewById(R.id.abschicken);
         laufzeitspinner = (Spinner)this.findViewById(R.id.spinnerlaufzeit);
+        tilgungsartspinner = (Spinner)this.findViewById(R.id.tilgungsform);
         kreditbetragview = (EditText)this.findViewById(R.id.kreditbetrag);
 
         abschickenbtn.setOnClickListener(this);
     }
     public void onClick(View v) {
         String laufzeittext = laufzeitspinner.getSelectedItem().toString();
+        String tilgungsart = tilgungsartspinner.getSelectedItem().toString();
         String kreditbetragstring = kreditbetragview.getText().toString();
-        int kreditbetrag = Integer.parseInt(kreditbetragstring);
+        float kreditbetrag = Float.parseFloat(kreditbetragstring);
 
 
 
         switch (laufzeittext) {
             case "1 Jahr":
                 Toast.makeText(this, laufzeittext, Toast.LENGTH_SHORT).show();
-                KreditauswertungIntentMethod(12, kreditbetrag);
+                KreditauswertungIntentMethod(1, kreditbetrag, tilgungsart);
                 break;
             case "2 Jahre":
                 Toast.makeText(this, laufzeittext, Toast.LENGTH_SHORT).show();
-                KreditauswertungIntentMethod(24, kreditbetrag);
+                KreditauswertungIntentMethod(2, kreditbetrag, tilgungsart);
                 break;
             case "3 Jahre":
                 Toast.makeText(this, laufzeittext, Toast.LENGTH_SHORT).show();
-                KreditauswertungIntentMethod(36, kreditbetrag);
+                KreditauswertungIntentMethod(3, kreditbetrag, tilgungsart);
                 break;
             case "4 Jahre":
                 Toast.makeText(this, laufzeittext, Toast.LENGTH_SHORT).show();
-                KreditauswertungIntentMethod(48, kreditbetrag);
+                KreditauswertungIntentMethod(4, kreditbetrag, tilgungsart);
                 break;
             case "5 Jahre":
                 Toast.makeText(this, laufzeittext, Toast.LENGTH_SHORT).show();
-                KreditauswertungIntentMethod(60, kreditbetrag);
+                KreditauswertungIntentMethod(5, kreditbetrag, tilgungsart);
                 break;
             case "6 Jahre":
                 Toast.makeText(this, laufzeittext, Toast.LENGTH_SHORT).show();
-                KreditauswertungIntentMethod(72, kreditbetrag);
+                KreditauswertungIntentMethod(6, kreditbetrag, tilgungsart);
                 break;
             case "7 Jahre":
                 Toast.makeText(this, laufzeittext, Toast.LENGTH_SHORT).show();
-                KreditauswertungIntentMethod(84, kreditbetrag);
+                KreditauswertungIntentMethod(7, kreditbetrag, tilgungsart);
                 break;
 
 
         }
     }
-    public void KreditauswertungIntentMethod(int laufzeitparameter, int kreditbetragparameter){
+    public void KreditauswertungIntentMethod(int laufzeitparameter, float kreditbetragparameter, String tilgungsformparameter){
         Intent kreditauswertungintent = new Intent(getApplicationContext(), KreditauswertungActivity.class);
         kreditauswertungintent.putExtra("Laufzeit", laufzeitparameter);
         kreditauswertungintent.putExtra("Kreditbetrag", kreditbetragparameter);
+        kreditauswertungintent.putExtra("Tilgungsform", tilgungsformparameter);
         startActivity(kreditauswertungintent);
     }
 

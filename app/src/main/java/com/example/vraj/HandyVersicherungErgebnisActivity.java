@@ -3,7 +3,6 @@ package com.example.vraj;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +20,7 @@ public class HandyVersicherungErgebnisActivity extends AppCompatActivity impleme
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.handyversicehrungergebnis);
+        setContentView(R.layout.handyversicherungergebnis);
 
         hersteller = (TextView) this.findViewById(R.id.view12);
         alter      = (TextView) this.findViewById(R.id.view22);
