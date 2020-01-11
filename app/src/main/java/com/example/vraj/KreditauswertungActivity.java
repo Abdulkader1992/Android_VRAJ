@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.DecimalFormat;
+
 public class KreditauswertungActivity extends AppCompatActivity {
 
     TextView kredittextview;
@@ -17,6 +19,9 @@ public class KreditauswertungActivity extends AppCompatActivity {
     TextView ratenview;
     TextView ratentextview;
     Button tilgungsplanbtn;
+
+    DecimalFormat euro = new DecimalFormat("###,###.00€");
+
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,16 +77,14 @@ public class KreditauswertungActivity extends AppCompatActivity {
         Toast.makeText(this, String.valueOf(tilgungsform), Toast.LENGTH_SHORT).show();
 
 
-        String kreditbetragstring = String.valueOf(kreditbetrag) + "€";
         String prozentstring = String.valueOf(kreditprozent) + " Prozent";
         String persoenlichelaufzeitstring = String.valueOf(kreditlaufzeit + " Jahre");
 
         ratentextview.setText("Jährliche" + ratentext + hinweis);
 
-        String ratenstring = String.valueOf(rate + " €");
-        ratenview.setText(ratenstring);
+        ratenview.setText(euro.format(rate));
 
-        kredittextview.setText(kreditbetragstring);
+        kredittextview.setText(euro.format(kreditbetrag));
         prozenttextview.setText(prozentstring);
         persoenlichelaufzeitview.setText(persoenlichelaufzeitstring);
 

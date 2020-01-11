@@ -34,7 +34,10 @@ public class KreditActivity extends AppCompatActivity implements View.OnClickLis
         String kreditbetragstring = kreditbetragview.getText().toString();
         float kreditbetrag = Float.parseFloat(kreditbetragstring);
 
-
+        if(kreditbetrag > 10000000){
+            String highkreditbetrag = "Ihr ausgewähltes Kreditvolumen ist zu hoch! \n Wir vergeben nur Kredite bis zu 10 Millionen Euro Euro!";
+            Toast.makeText(this, highkreditbetrag, Toast.LENGTH_SHORT).show();
+        }else{
 
         switch (laufzeittext) {
             case "1 Jahr":
@@ -66,7 +69,7 @@ public class KreditActivity extends AppCompatActivity implements View.OnClickLis
                 KreditauswertungIntentMethod(7, kreditbetrag, tilgungsart);
                 break;
 
-
+        }
         }
     }
     public void KreditauswertungIntentMethod(int laufzeitparameter, float kreditbetragparameter, String tilgungsformparameter){

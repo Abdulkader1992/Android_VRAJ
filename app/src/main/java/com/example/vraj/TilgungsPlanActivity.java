@@ -18,6 +18,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.text.DecimalFormat;
 
 import static android.view.Gravity.CENTER;
+import static android.view.Gravity.LEFT;
+import static android.view.Gravity.RIGHT;
 
 public class TilgungsPlanActivity extends AppCompatActivity {
 
@@ -65,8 +67,9 @@ public class TilgungsPlanActivity extends AppCompatActivity {
             for (int j = 0; j < 5; j++) {
                 // Creation textView
                 final TextView text = new TextView(this);
-                text.setTextSize(20);
+                text.setTextSize(14);
                 text.setGravity(CENTER);
+
 
 
                 zinsen = zinsenberechnunng(kreditprozentfloat, kreditsumme);
