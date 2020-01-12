@@ -57,7 +57,7 @@ public class TilgungsPlanActivity extends AppCompatActivity {
             annuitat = tilgungsplanintent.getDoubleExtra("Rate", 1);
         }
 
-        for (int i = kreditlaufzeit; i >= 1; i--) {
+        for (int i = kreditlaufzeit; i >= 1; i--) { //test
             // Creation row
             final TableRow tableRow = new TableRow(this);
             tableRow.setGravity(CENTER);
