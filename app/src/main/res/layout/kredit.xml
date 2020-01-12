@@ -1,92 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_gravity="center">
-
-<LinearLayout
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center">
-
+    tools:ignore="MissingDefaultResource"
+    android:background="#fff">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_gravity="center"
         android:gravity="center"
         android:background="#fff">
 
-        <TextView
-            android:id="@+id/kreditvolumen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bestimmen Sie Ihr Kreditvolumen"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:gravity="center"
-            android:textColor="#000"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_marginBottom="60dp"
-            android:background="#eee"/>
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/kreditbetrag"
-            android:layout_width="wrap_content"
+            <ImageView
+                android:id="@+id/imageKredit"
+                android:layout_width="210dp"
+                android:layout_height="200dp"
+                android:background="@drawable/bg2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number" />
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="#eee">
+
+            <TextView
+                android:id="@+id/Kreditvolumentext"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:text="Kreditvolumen"/>
+
+            <EditText
+                android:id="@+id/kreditbetrag"
+                android:inputType="numberDecimal"
+                android:layout_width="350dp"
+                android:layout_height="?attr/dropdownListPreferredItemHeight"
+                android:background="#fff"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/laufzeit"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:text="Kreditlaufzeit"/>
+
+            <Spinner
+                android:id="@+id/spinnerlaufzeit"
+                style="?attr/spinnerDropDownItemStyle"
+                android:layout_width="350dp"
+                android:layout_height="?attr/dropdownListPreferredItemHeight"
+                android:background="@drawable/gradient_spinner"
+                android:ellipsize="marquee"
+                android:entries="@array/kredit_arrays"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tilgungsformtext"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:text="Tilgungsform"/>
+
+            <Spinner
+                android:id="@+id/tilgungsform"
+                style="?attr/spinnerDropDownItemStyle"
+                android:layout_width="350dp"
+                android:layout_height="?attr/dropdownListPreferredItemHeight"
+                android:background="@drawable/gradient_spinner"
+                android:ellipsize="marquee"
+                android:entries="@array/tilgungsarten_arrays"
+                android:textSize="18sp" />
+
+
+            <Button
+                android:id="@+id/abschicken"
+
+                android:layout_marginTop="30dp"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_button"
+                android:text="Weiter"
+                android:textSize="20dp"
+                android:textAllCaps="false"
+                android:textColor="#000"/>
+
+
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/laufzeit"
-            android:layout_width="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="#eee"
-            android:text="Bestimmen Sie die Laufzeit"
-            android:gravity="center"
             android:textColor="#000"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_marginBottom="60dp"/>
-
-        <Spinner
-            android:id="@+id/spinnerlaufzeit"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:entries="@array/kredit_arrays">
-
-        </Spinner>
+            android:textSize="20sp"
+            android:text="Häufige Fragen: "/>
 
         <TextView
-            android:id="@+id/tilgungsformtext"
-            android:layout_width="wrap_content"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="#eee"
-            android:text="Wählen Sie Ihre Tilgunsart"
-            android:gravity="center"
             android:textColor="#000"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_marginBottom="60dp"/>
-
-        <Spinner
-            android:id="@+id/tilgungsform"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:entries="@array/tilgungsarten_arrays">
-
-        </Spinner>
-
+            android:textSize="10dp"
+            android:text="- Welche Schäden deckt VRAJ-Versicehrung ab?
+                        \n- Bei wem melde ich einen Schaden?
+                        \n- Wie lange dauert die Bearbeitung eines Schadensfall?
+                        \n- Was ist zu beachten, wenn ich als versicherte Person nicht der Käufer des Handys bin?
+                        \nDrücken Sie auf Informationen um die Antworten zu schauen"/>
         <Button
-            android:id="@+id/abschicken"
-            android:layout_width="wrap_content"
+            android:id="@+id/info"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:text="Abschicken"
-            android:textAllCaps="false"/>
+            android:text="Informationen"
+            android:textAllCaps="false"
+            android:textColor="#000"/>
 
     </LinearLayout>
-</LinearLayout>
 </ScrollView>

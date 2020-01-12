@@ -43,24 +43,23 @@
             <TableRow>
                 <TextView
                     android:text="Jahr"
-                    android:padding="5dip"
-                    android:background="#26EAFF"/>
+                    android:padding="10dip" />
                 <TextView
                     android:text="Restschuld"
-                    android:padding="5dip" />
+                    android:padding="10dip"
+                    android:background="#26EAFF"/>
 
                 <TextView
                     android:text="Zinsen"
-                    android:padding="5dip"
-                    android:background="#26EAFF"/>
+                    android:padding="10dip" />
                 <TextView
                     android:text="Tilgungsrate"
-                    android:padding="5dip" />
+                    android:padding="10dip"
+                    android:background="#26EAFF"/>
 
                 <TextView
                     android:text="Annuitätsrate"
-                    android:padding="5dip"
-                    android:background="#26EAFF"/>
+                    android:padding="10dip" />
 
 
             </TableRow>

@@ -44,6 +44,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="#000"
                     android:textSize="20sp"
+                    android:paddingLeft="10dp"
                     android:text="Kreditsumme: "/>
 
                 <TextView
@@ -68,7 +69,8 @@
                     android:layout_height="wrap_content"
                     android:textColor="#000"
                     android:textSize="20sp"
-                    android:text="Jährlicher Prozentsatz: "/>
+                    android:text="Jährlicher Prozentsatz: "
+                    android:paddingLeft="10dp"/>
 
                 <TextView
                     android:id="@+id/prozent"
@@ -92,6 +94,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="#000"
                     android:textSize="20sp"
+                    android:paddingLeft="10dp"
                     android:text="Laufzeit: "/>
 
                 <TextView
@@ -115,7 +118,8 @@
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:textColor="#000"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:paddingLeft="10dp"/>
 
                 <TextView
                     android:id="@+id/rate"
@@ -124,7 +128,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="#000"
                     android:textSize="20sp"
-                    android:text="Ergebnis 4"/>
+                    android:text="Ergebnis 4" />
 
             </LinearLayout>
 
@@ -141,7 +145,12 @@
                     android:textAllCaps="false"
                     android:layout_below="@+id/editText5"
                     android:layout_alignEnd="@+id/editText5"
-                    android:enabled="true" />
+                    android:enabled="true"
+                    android:background="@drawable/gradient_button"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"/>
+
+
             </LinearLayout>
 
             </LinearLayout>

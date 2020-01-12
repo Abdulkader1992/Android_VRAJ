@@ -65,7 +65,7 @@ public class TilgungsPlanActivity extends AppCompatActivity {
             jahr++;
 
             for (int j = 0; j < 5; j++) {
-                // Creation textView
+
                 final TextView text = new TextView(this);
                 text.setTextSize(14);
                 text.setGravity(CENTER);
