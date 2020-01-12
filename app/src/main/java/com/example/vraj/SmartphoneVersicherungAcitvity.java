@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.DecimalFormat;
 
+
 public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements View.OnClickListener{
 
     private static Spinner spinner1;
@@ -102,136 +103,135 @@ public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements
     public void onClick(View v)
     {
         String preis = preisEingabe.getText().toString();
-        Double preisZahl = Double.valueOf(preis).doubleValue();
-        switch (v.getId())
+        if(preis.isEmpty())
         {
-            case R.id.btnSubmit:
-          //      if(preis.matches("[0-9]+"))             // Eigabe überprüfen
-          //      {
-          //          Toast.makeText(this, preis, Toast.LENGTH_SHORT).show();
-          //      }
-          //      else
-          //      {
-          //          Toast.makeText(this, "Fehler bei der Eingabe bitte überprüfen Sie Ihre Eingabe", Toast.LENGTH_SHORT).show();
-          //      }
+            String fehlermeldung = "Sie haben eine ungültige Eingabe eingetragen!";
+            Toast.makeText(this, fehlermeldung, Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Double preisZahl = Double.valueOf(preis).doubleValue();
+            switch (v.getId()) {
+                case R.id.btnSubmit:
 
-                if (herstellerAuswahl() == 1) // HUAWEI ************************************
-                {
-                    if(alterAuswahl() == 1)  // weniger als einen Monat----------
+                    if (herstellerAuswahl() == 1) // HUAWEI ************************************
                     {
-                        if(diebstahlAuswahl() == 1) // Diebstahl versichert (JA)
+                        if (alterAuswahl() == 1)  // weniger als einen Monat----------
                         {
-                            versicherung = (preisZahl*(0.01))+ 2;    // Formel                                           §§§§§§§§§§§§§§§§§§§§§§§§§§
-                        }
-                        else if(diebstahlAuswahl() == 2) // Diebstahl nicht versichert (Nein)
+                            if (diebstahlAuswahl() == 1) // Diebstahl versichert (JA)
+                            {
+                                versicherung = (preisZahl * (0.01)) + 2;    // Formel                                           §
+                            } else if (diebstahlAuswahl() == 2) // Diebstahl nicht versichert (Nein)
+                            {
+                                versicherung = (preisZahl * (0.01));    // Formel                                               §
+                            }
+                        } else if (alterAuswahl() == 2) // Weniger als 6 Monaten--------
                         {
-                            versicherung = (preisZahl*(0.01));    // Formel                                                §§§§§§§§§§§§§§§§§§§§§§§§§§
-                        }
-                    }
-                    else if(alterAuswahl() == 2) // Weniger als 6 Monaten--------
-                    {
-                        if(diebstahlAuswahl() == 1) // Diebstahl versichert (JA)
-                        {
-                            versicherung = (preisZahl*(0.012)) + 2;    // Formel                                          §§§§§§§§§§§§§§§§§§§§§§§§§§
-                        }
-                        else if(diebstahlAuswahl() == 2) // Diebstahl nicht versichert (Nein)
-                        {
-                            versicherung = (preisZahl*(0.012)); // Formel                                                   §§§§§§§§§§§§§§§§§§§§§§§§§§
-                        }
+                            if (diebstahlAuswahl() == 1) // Diebstahl versichert (JA)
+                            {
+                                versicherung = (preisZahl * (0.012)) + 2;    // Formel                                          §
+                            } else if (diebstahlAuswahl() == 2) // Diebstahl nicht versichert (Nein)
+                            {
+                                versicherung = (preisZahl * (0.012)); // Formel                                                 §
+                            }
 
-                    }
-                    else if(alterAuswahl() == 3) // Mehr als 6 Monaten----------
-                    {
-                        if(diebstahlAuswahl() == 1) //Diebstahl versichert (JA)
+                        } else if (alterAuswahl() == 3) // Mehr als 6 Monaten----------
                         {
-                            versicherung = (preisZahl*(0.015)) + 2; // Formel                                             §§§§§§§§§§§§§§§§§§§§§§§§§§
-                        }
-                        else if(diebstahlAuswahl() == 2) //Diebstahl nicht versicehrt (Nein)
-                        {
-                            versicherung = (preisZahl*(0.015));    // Formel                                                §§§§§§§§§§§§§§§§§§§§§§§§§§
-                        }
-                    }
-
-                }
-                else if(herstellerAuswahl() == 2) // SAMSUNG ******************************+
-                {
-                    if(alterAuswahl() == 1)  // weniger als einen Monat----------
-                    {
-                        if(diebstahlAuswahl() == 1) // Diebstahl versichert (JA)
-                        {
-                            versicherung = (preisZahl*(0.012)) + 2;// Formel                                                §§§§§§§§§§§§§§§§§§§§§§§§§§
-                        }
-                        else if(diebstahlAuswahl() == 2) // Diebstahl nicht versichert (Nein)
-                        {
-                            versicherung = (preisZahl*(0.012)); // Formel                                                   §§§§§§§§§§§§§§§§§§§§§§§§§§
-                        }
-                    }
-                    else if(alterAuswahl() == 2) // Weniger als 6 Monaten--------
-                    {
-                        if(diebstahlAuswahl() == 1) // Diebstahl versichert (JA)
-                        {
-                            versicherung = (preisZahl*(0.015)) + 2; // Formel                                               §§§§§§§§§§§§§§§§§§§§§§§§§§
-                        }
-                        else if(diebstahlAuswahl() == 2) // Diebstahl nicht versichert (Nein)
-                        {
-                            versicherung = (preisZahl*(0.015)); // Formel                                                   §§§§§§§§§§§§§§§§§§§§§§§§§§
+                            if (diebstahlAuswahl() == 1) //Diebstahl versichert (JA)
+                            {
+                                versicherung = (preisZahl * (0.015)) + 2; // Formel                                             §
+                            } else if (diebstahlAuswahl() == 2) //Diebstahl nicht versicehrt (Nein)
+                            {
+                                versicherung = (preisZahl * (0.015));    // Formel                                              §
+                            }
                         }
 
-                    }
-                    else if(alterAuswahl() == 3) // Mehr als 6 Monaten----------
+                    } else if (herstellerAuswahl() == 2) // SAMSUNG ******************************+
                     {
-                        if(diebstahlAuswahl() == 1) //Diebstahl versichert (JA)
+                        if (alterAuswahl() == 1)  // weniger als einen Monat----------
                         {
-                            versicherung = (preisZahl*(0.018)) + 2; // Formel                                               §§§§§§§§§§§§§§§§§§§§§§§§§§
-                        }
-                        else if(diebstahlAuswahl() == 2) //Diebstahl nicht versicehrt (Nein)
+                            if (diebstahlAuswahl() == 1) // Diebstahl versichert (JA)
+                            {
+                                versicherung = (preisZahl * (0.012)) + 2;// Formel                                              §
+                            } else if (diebstahlAuswahl() == 2) // Diebstahl nicht versichert (Nein)
+                            {
+                                versicherung = (preisZahl * (0.012)); // Formel                                                 §
+                            }
+                        } else if (alterAuswahl() == 2) // Weniger als 6 Monaten--------
                         {
-                            versicherung = (preisZahl*(0.018)); // Formel                                                   §§§§§§§§§§§§§§§§§§§§§§§§§§
-                        }
-                    }
-                }
-                else if(herstellerAuswahl() == 3) // IPhone ********************************
-                {
-                    if(alterAuswahl() == 1)  // weniger als einen Monat----------
-                    {
-                        if(diebstahlAuswahl() == 1) // Diebstahl versichert (JA)
-                        {
-                            versicherung = (preisZahl*(0.015)) + 3;// Formel                                                §§§§§§§§§§§§§§§§§§§§§§§§§§
-                        }
-                        else if(diebstahlAuswahl() == 2) // Diebstahl nicht versichert (Nein)
-                        {
-                            versicherung = (preisZahl*(0.015)); // Formel                                                   §§§§§§§§§§§§§§§§§§§§§§§§§§
-                        }
-                    }
-                    else if(alterAuswahl() == 2) // Weniger als 6 Monaten--------
-                    {
-                        if(diebstahlAuswahl() == 1) // Diebstahl versichert (JA)
-                        {
-                            versicherung = (preisZahl*(0.018)) + 3;// Formel                                                §§§§§§§§§§§§§§§§§§§§§§§§§§
-                        }
-                        else if(diebstahlAuswahl() == 2) // Diebstahl nicht versichert (Nein)
-                        {
-                            versicherung = (preisZahl*(0.018));// Formel                                                    §§§§§§§§§§§§§§§§§§§§§§§§§§
-                        }
+                            if (diebstahlAuswahl() == 1) // Diebstahl versichert (JA)
+                            {
+                                versicherung = (preisZahl * (0.015)) + 2; // Formel                                             §
+                            } else if (diebstahlAuswahl() == 2) // Diebstahl nicht versichert (Nein)
+                            {
+                                versicherung = (preisZahl * (0.015)); // Formel                                                 §
+                            }
 
-                    }
-                    else if(alterAuswahl() == 3) // Mehr als 6 Monaten----------
+                        } else if (alterAuswahl() == 3) // Mehr als 6 Monaten----------
+                        {
+                            if (diebstahlAuswahl() == 1) //Diebstahl versichert (JA)
+                            {
+                                versicherung = (preisZahl * (0.018)) + 2; // Formel                                             §
+                            } else if (diebstahlAuswahl() == 2) //Diebstahl nicht versicehrt (Nein)
+                            {
+                                versicherung = (preisZahl * (0.018)); // Formel                                                 §
+                            }
+                        }
+                    } else if (herstellerAuswahl() == 3) // IPhone ********************************
                     {
-                        if(diebstahlAuswahl() == 1) //Diebstahl versichert (JA)
+                        if (alterAuswahl() == 1)  // weniger als einen Monat----------
                         {
-                            versicherung = (preisZahl*(0.02)) + 3;// Formel                                                 §§§§§§§§§§§§§§§§§§§§§§§§§§
-                        }
-                        else if(diebstahlAuswahl() == 2) //Diebstahl nicht versicehrt (Nein)
+                            if (diebstahlAuswahl() == 1) // Diebstahl versichert (JA)
+                            {
+                                versicherung = (preisZahl * (0.015)) + 3;// Formel                                              §
+                            } else if (diebstahlAuswahl() == 2) // Diebstahl nicht versichert (Nein)
+                            {
+                                versicherung = (preisZahl * (0.015)); // Formel                                                 §
+                            }
+                        } else if (alterAuswahl() == 2) // Weniger als 6 Monaten--------
                         {
-                            versicherung = (preisZahl*(0.02));// Formel                                                     §§§§§§§§§§§§§§§§§§§§§§§§§§
+                            if (diebstahlAuswahl() == 1) // Diebstahl versichert (JA)
+                            {
+                                versicherung = (preisZahl * (0.018)) + 3;// Formel                                              §
+                            } else if (diebstahlAuswahl() == 2) // Diebstahl nicht versichert (Nein)
+                            {
+                                versicherung = (preisZahl * (0.018));// Formel                                                  §
+                            }
+
+                        } else if (alterAuswahl() == 3) // Mehr als 6 Monaten----------
+                        {
+                            if (diebstahlAuswahl() == 1) //Diebstahl versichert (JA)
+                            {
+                                versicherung = (preisZahl * (0.02)) + 3;// Formel                                               §
+                            } else if (diebstahlAuswahl() == 2) //Diebstahl nicht versicehrt (Nein)
+                            {
+                                versicherung = (preisZahl * (0.02));// Formel                                                   §
+                            }
                         }
                     }
-                }
-                Intent intent = new Intent(getApplicationContext(), HandyVersicherungErgebnisActivity.class);
-                startActivity(intent);
-                break;
+                    if(preisZahl < 2500 && preisZahl >= 100) {
+                        Intent intent = new Intent(getApplicationContext(), HandyVersicherungErgebnisActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+                    else if(preisZahl < 100)
+                    {
+                        String fehlermeldung = "Ihr Handy-Einkaufpreis ist zu niedrig! \n Wir vergeben nur Handyeikaufpreise ab 100 Euro!";
+                        Toast.makeText(this, fehlermeldung, Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                    else
+                    {
+                        String fehlermeldung = "Ihr Handy-Einkaufpreis ist zu hoch! \n Wir vergeben nur Handyeikaufpreise bis zu 2500 Euro!";
+                        Toast.makeText(this, fehlermeldung, Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                default:
+                    throw new IllegalStateException("\n" + "Unerwarteter Wert: " + v.getId());
+            }
         }
     }
+
 
     // Spinner anzeigen
 
@@ -255,12 +255,13 @@ public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements
         String kaufpreis = preisEingabe.getText().toString();
         return kaufpreis;
     }
-    public static String zahlungView()
+    public static double zahlungView()
     {
         //VersicherungErgebnisse anzeigen
-        float ergebnis = (Math.round(versicherung*100))/100;
-        String zahl = new Float(ergebnis).toString();
-        return zahl;
+
+        DecimalFormat euro = new DecimalFormat("###,###.00€");
+        double ergebnis = Math.round(versicherung * 100) / 100.0;
+        return (ergebnis);
     }
 }
 

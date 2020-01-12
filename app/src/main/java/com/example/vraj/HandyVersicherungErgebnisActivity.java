@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.DecimalFormat;
+
 
 public class HandyVersicherungErgebnisActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -16,6 +18,7 @@ public class HandyVersicherungErgebnisActivity extends AppCompatActivity impleme
     private TextView diebstahl;
     private TextView kaufpreis;
     private TextView zahlung;
+    DecimalFormat euro = new DecimalFormat("###,###.00€");
 
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -28,6 +31,7 @@ public class HandyVersicherungErgebnisActivity extends AppCompatActivity impleme
         kaufpreis  = (TextView) this.findViewById(R.id.view42);
         zahlung    = (TextView) this.findViewById(R.id.view52);
 
+
         infobtn    = (Button) this.findViewById(R.id.info1);
         infobtn.setOnClickListener(this);
 
@@ -35,7 +39,7 @@ public class HandyVersicherungErgebnisActivity extends AppCompatActivity impleme
         alter.setText(SmartphoneVersicherungAcitvity.alterView());
         diebstahl.setText(SmartphoneVersicherungAcitvity.diebstahlView());
         kaufpreis.setText(SmartphoneVersicherungAcitvity.kaufpreisView());
-        zahlung.setText(SmartphoneVersicherungAcitvity.zahlungView());
+        zahlung.setText(euro.format(SmartphoneVersicherungAcitvity.zahlungView()));
     }
 
     @Override

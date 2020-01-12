@@ -145,24 +145,13 @@
 
                 <TextView
                     android:id="@+id/view52"
-                    android:inputType="numberDecimal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
                     android:layout_marginBottom="20dp"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
+                    android:text="Ergebnis5: "
                     android:textColor="#000"
-                    android:textSize="20sp"
-                    android:text="Ergebnis5: "/>
-
-                <TextView
-                    android:id="@+id/view53"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginBottom="20dp"
-                    android:layout_width="20dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textSize="20sp"
-                    android:text="€"/>
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
