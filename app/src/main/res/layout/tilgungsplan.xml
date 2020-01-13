@@ -22,7 +22,7 @@
             android:layout_marginTop="20dp"
             android:textSize="20dip"
             android:layout_gravity="center"
-            android:text="Rückzahlungssumme: "/>
+            android:text="@string/repaymentamount"/>
 
         <TextView
             android:id="@+id/gesamtsumme"
@@ -42,23 +42,23 @@
             android:stretchColumns="*">
             <TableRow>
                 <TextView
-                    android:text="Jahr"
+                    android:text="@string/year"
                     android:padding="10dip" />
                 <TextView
-                    android:text="Restschuld"
+                    android:text="@string/remainingdebt"
                     android:padding="10dip"
                     android:background="#26EAFF"/>
 
                 <TextView
-                    android:text="Zinsen"
+                    android:text="@string/interests"
                     android:padding="10dip" />
                 <TextView
-                    android:text="Tilgungsrate"
+                    android:text="@string/repaymentrate"
                     android:padding="10dip"
                     android:background="#26EAFF"/>
 
                 <TextView
-                    android:text="Annuitätsrate"
+                    android:text="@string/annuityrate"
                     android:padding="10dip" />
 
 

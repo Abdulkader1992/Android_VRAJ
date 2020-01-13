@@ -18,7 +18,7 @@
             android:gravity="center"
             android:textColor="#000"
             android:textSize="20dp"
-            android:text="Der sicherste Weg zum Kredit und beste Handy-Versicherung"
+            android:text="@string/selectionofservices"
             android:layout_marginBottom="60dp"
             android:background="#eee"/>
 
@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
-                android:text="Handy Versicherung"
+                android:text="@string/mobilephoneinsurance"
                 android:textAllCaps="false"
                 android:textSize="25dp" />
 
@@ -59,7 +59,7 @@
                 android:id="@+id/kredit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kredit"
+                android:text="@string/credit"
                 android:textAllCaps="false"
                 android:textSize="25dp" />
 
@@ -69,7 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
-            android:text="Über uns"
+            android:text="@string/aboutus"
             android:layout_marginTop="10dp"
             android:background="#aaa"/>
 

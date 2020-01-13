@@ -61,11 +61,11 @@ public class KreditauswertungActivity extends AppCompatActivity {
 
         if (tilgungsform.equals("Tilgungsdarlehnen")) {
             rate = tilgungsberechnung(kreditlaufzeit, kreditbetrag);
-            ratentext = " \nTilgungsrate";
-            hinweis = " \nzzgl. variabler Zinsen";
+            ratentext = getString(R.string.yearlyrepaymentrate);
+            hinweis = "\n" + getString(R.string.plusvariableinterest);
         } else {
             rate = annuitatsberechnung(kreditlaufzeit, kreditbetrag, kreditprozentfloat);
-            ratentext = " \nAnnuitätsrate";
+            ratentext = "\n" + getString(R.string.annuityrate);
             hinweis = "";
         }
 
@@ -80,7 +80,7 @@ public class KreditauswertungActivity extends AppCompatActivity {
         String prozentstring = String.valueOf(kreditprozent) + " Prozent";
         String persoenlichelaufzeitstring = String.valueOf(kreditlaufzeit + " Jahre");
 
-        ratentextview.setText("Jährliche" + ratentext + hinweis);
+        ratentextview.setText(ratentext + hinweis);
 
         ratenview.setText(euro.format(rate));
 

@@ -27,7 +27,23 @@
 
     </string-array>
 
-    <string-array name="kredit_arrays">
+
+    // Hier hab ich meine Sachen als String Referenz hinterlegt.
+
+<string name="signup">Zur Anmeldung</string>
+    <string name="withoutregistration">Ohne Anmeldung fortfahren</string>
+    <string name="shutdownapp">App beenden</string>
+
+
+<string name="selectionofservices">Der sicherste Weg zum Kredit und Handy-Versicherung</string>
+    <string name="mobilephoneinsurance">Handy Versicherung</string>
+    <string name="credit">Kredit</string>
+    <string name="aboutus">Über uns</string>
+
+    <string name="creditvolume">Kreditvolumen</string>
+    <string name="defaultnumber">0</string>
+    <string name="creditperiod">Kreditlaufzeit</string>
+    <string-array name="credit_arrays">
         <item>1 Jahr</item>
         <item>2 Jahre</item>
         <item>3 Jahre</item>
@@ -36,11 +52,37 @@
         <item>6 Jahre</item>
         <item>7 Jahre</item>
     </string-array>
-
-    <string-array name="tilgungsarten_arrays">
+    <string name="formofpayment">Kreditvolumen</string>
+    <string-array name="formofpayment_arrays">
         <item>Tilgungsdarlehnen</item>
         <item>Annuitätendarlehnen</item>
     </string-array>
 
+    <string name="continue_button">Weiter</string>
+    <string name="faq">Häufige Frage:</string>
+    <string name="credit_faq">- Was ist der Unterschied zwischen den Tilgungsformen? \n
+    - Welche Tilgungsform ist günstiger? \n</string>
+    <string name="information">Informationen</string>
+
+    <string name="falseinput">Sie haben eine ungültige Eingabe eingetragen!</string>
+
+    <string name="creditvolumehigh">Ihr ausgewähltes Kreditvolumen ist zu hoch! \n
+ Wir vergeben nur Kredite bis zu 10 Millionen Euro!</string>
+    <string name="creditvolumelow">Ihr ausgewähltes Kreditvolumen ist zu niedrig! \n
+        Wir vergeben nur Kredite ab 500 Euro!</string>
+
+    <string name="annualpercentagerate">Jährlicher Prozentsatz</string>
+
+    <string name="yearlyrepaymentrate">Jährliche Tilgungsrate</string>
+    <string name="repaymentrate">Tilgungsrate</string>
+
+<string name="plusvariableinterest">zzgl. varialber Zinsen</string>
+<string name="annuityrate">Annuitätsrate</string>
+    <string name="createrepaymentplan">Tilgungsplan \n erstellen</string>
+
+<string name="repaymentamount">Rückzahlungsumme:</string>
+    <string name="year">Jahr</string>
+    <string name="remainingdebt">Restschuld</string>
+    <string name="interests">Zinsen</string>
 
 </resources>

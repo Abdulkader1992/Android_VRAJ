@@ -41,7 +41,7 @@
                 android:textColor="#000"
                 android:textSize="20sp"
                 android:layout_marginTop="10dp"
-                android:text="Kreditvolumen"/>
+                android:text="@string/creditvolume"/>
 
             <EditText
                 android:id="@+id/kreditbetrag"
@@ -52,7 +52,7 @@
                 android:textSize="20sp"
                 android:padding="10dp"
                 android:layout_marginTop="10dp"
-                android:text="0" />
+                android:text="@string/defaultnumber" />
 
             <TextView
                 android:id="@+id/laufzeit"
@@ -62,7 +62,7 @@
                 android:textColor="#000"
                 android:textSize="20sp"
                 android:layout_marginBottom="10dp"
-                android:text="Kreditlaufzeit"/>
+                android:text="@string/creditperiod"/>
 
             <Spinner
                 android:id="@+id/spinnerlaufzeit"
@@ -71,7 +71,7 @@
                 android:layout_height="?attr/dropdownListPreferredItemHeight"
                 android:background="@drawable/gradient_spinner"
                 android:ellipsize="marquee"
-                android:entries="@array/kredit_arrays"
+                android:entries="@array/credit_arrays"
                 android:textSize="18sp"/>
 
             <TextView
@@ -82,7 +82,7 @@
                 android:textColor="#000"
                 android:textSize="20sp"
                 android:layout_marginBottom="10dp"
-                android:text="Tilgungsform"/>
+                android:text="@string/formofpayment"/>
 
             <Spinner
                 android:id="@+id/tilgungsform"
@@ -91,7 +91,7 @@
                 android:layout_height="?attr/dropdownListPreferredItemHeight"
                 android:background="@drawable/gradient_spinner"
                 android:ellipsize="marquee"
-                android:entries="@array/tilgungsarten_arrays"
+                android:entries="@array/formofpayment_arrays"
                 android:textSize="18sp" />
 
 
@@ -102,7 +102,7 @@
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/gradient_button"
-                android:text="Weiter"
+                android:text="@string/continue_button"
                 android:textSize="20dp"
                 android:textAllCaps="false"
                 android:textColor="#000"/>
@@ -117,23 +117,19 @@
             android:layout_height="wrap_content"
             android:textColor="#000"
             android:textSize="20sp"
-            android:text="Häufige Fragen: "/>
+            android:text="@string/faq"/>
 
         <TextView
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:textColor="#000"
             android:textSize="10dp"
-            android:text="- Welche Schäden deckt VRAJ-Versicehrung ab?
-                        \n- Bei wem melde ich einen Schaden?
-                        \n- Wie lange dauert die Bearbeitung eines Schadensfall?
-                        \n- Was ist zu beachten, wenn ich als versicherte Person nicht der Käufer des Handys bin?
-                        \nDrücken Sie auf Informationen um die Antworten zu schauen"/>
+            android:text="@string/credit_faq"/>
         <Button
             android:id="@+id/info"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:text="Informationen"
+            android:text="@string/information"
             android:textAllCaps="false"
             android:textColor="#000"/>
 

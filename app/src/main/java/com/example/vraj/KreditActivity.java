@@ -33,16 +33,16 @@ public class KreditActivity extends AppCompatActivity implements View.OnClickLis
         String tilgungsart = tilgungsartspinner.getSelectedItem().toString();
         String kreditbetragstring = kreditbetragview.getText().toString();
         if (kreditbetragstring.isEmpty()) {
-            String fehlermeldung = "Sie haben eine ungültige Eingabe eingetragen!";
+            String fehlermeldung = getString(R.string.falseinput);
             Toast.makeText(this, fehlermeldung, Toast.LENGTH_SHORT).show();
         }
         else {
                 Float kreditbetrag = Float.parseFloat(kreditbetragstring);
                 if (kreditbetrag > 10000000) {
-                    String highkreditbetrag = "Ihr ausgewähltes Kreditvolumen ist zu hoch! \n Wir vergeben nur Kredite bis zu 10 Millionen Euro!";
+                    String highkreditbetrag = getString(R.string.creditvolumehigh);
                     Toast.makeText(this, highkreditbetrag, Toast.LENGTH_SHORT).show();
                 } else if (kreditbetrag < 500) {
-                    String highkreditbetrag = "Ihr ausgewähltes Kreditvolumen ist zu niedrig! \n Wir vergeben nur Kredite ab 500 Euro!";
+                    String highkreditbetrag = getString(R.string.creditvolumelow);;
                     Toast.makeText(this, highkreditbetrag, Toast.LENGTH_SHORT).show();
                 } else {
 
