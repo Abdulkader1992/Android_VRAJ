@@ -44,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="#000"
                     android:textSize="20sp"
-                    android:text="Hersteller: "/>
+                    android:text="@string/manufacturer"/>
 
                 <TextView
                     android:id="@+id/view12"
@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#000"
                 android:textSize="20sp"
-                android:text="Ergebnis 1"/>
+                android:text="@string/result"/>
             </LinearLayout>
 
             <LinearLayout
@@ -68,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="#000"
                     android:textSize="20sp"
-                    android:text="Alter: "/>
+                    android:text="@string/devices_age"/>
 
                 <TextView
                     android:id="@+id/view22"
@@ -77,7 +77,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="#000"
                     android:textSize="20sp"
-                    android:text="Ergebnis 2"/>
+                    android:text="@string/result"/>
 
             </LinearLayout>
 
@@ -92,7 +92,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="#000"
                     android:textSize="20sp"
-                    android:text="DsV: "/>
+                    android:text="@string/tp"/>
 
                 <TextView
                     android:id="@+id/view32"
@@ -101,7 +101,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="#000"
                     android:textSize="20sp"
-                    android:text="Ergebnis 3"/>
+                    android:text="@string/result"/>
 
             </LinearLayout>
 
@@ -116,7 +116,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="#000"
                     android:textSize="20sp"
-                    android:text="Kaufpreis: "/>
+                    android:text="@string/Purchase_price"/>
 
                 <TextView
                     android:id="@+id/view42"
@@ -125,7 +125,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="#000"
                     android:textSize="20sp"
-                    android:text="Ergebnis 4"/>
+                    android:text="@string/result"/>
 
             </LinearLayout>
 
@@ -141,7 +141,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="#000"
                     android:textSize="20sp"
-                    android:text="monatlich: "/>
+                    android:text="@string/monthly"/>
 
                 <TextView
                     android:id="@+id/view52"
@@ -149,7 +149,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
                     android:layout_marginBottom="20dp"
-                    android:text="Ergebnis5: "
+                    android:text="@string/result"
                     android:textColor="#000"
                     android:textSize="20sp" />
 
@@ -164,23 +164,19 @@
             android:layout_height="wrap_content"
             android:textColor="#000"
             android:textSize="20sp"
-            android:text="Häufige Fragen: "/>
+            android:text="@string/faq"/>
 
         <TextView
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:textColor="#000"
             android:textSize="10dp"
-            android:text="- Welche Schäden deckt VRAJ-Versicehrung ab?
-                        \n- Bei wem melde ich einen Schaden?
-                        \n- Wie lange dauert die Bearbeitung eines Schadensfall?
-                        \n- Was ist zu beachten, wenn ich als versicherte Person nicht der Käufer des Handys bin?
-                        \nDrücken Sie auf Informationen um die Antworten zu schauen"/>
+            android:text="@string/info_questions"/>
         <Button
             android:id="@+id/info1"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:text="Informationen"
+            android:text="@string/information"
             android:textAllCaps="false"
             android:textColor="#000"/>
 

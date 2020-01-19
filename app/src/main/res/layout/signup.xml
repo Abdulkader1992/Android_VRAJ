@@ -21,7 +21,7 @@
         android:gravity="center"
         android:textColor="#000"
         android:textSize="40sp"
-        android:text="Registrierung"
+        android:text="@string/singup_subject"
         android:layout_marginBottom="60dp"
         android:background="#eee"/>
 
@@ -38,7 +38,7 @@
             android:layout_marginTop="30dp"
             android:textColor="#000"
             android:textSize="20sp"
-            android:text="E-Mail"/>
+            android:text="@string/e_mail"/>
 
         <EditText
             android:id="@+id/ediUser"
@@ -47,7 +47,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:ems="30"
-            android:hint="e-mail" />
+            android:hint="@string/e_mail" />
 
         <TextView
             android:id="@+id/passEingabe"
@@ -57,7 +57,7 @@
             android:layout_marginTop="30dp"
             android:textColor="#000"
             android:textSize="20sp"
-            android:text="Kennwort"/>
+            android:text="@string/password"/>
 
         <EditText
             android:id="@+id/ediPass"
@@ -67,7 +67,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:ems="30"
-            android:hint="password" />
+            android:hint="@string/password" />
 
         <TextView
             android:id="@+id/passEingabe2"
@@ -77,7 +77,7 @@
             android:layout_marginTop="30dp"
             android:textColor="#000"
             android:textSize="20sp"
-            android:text="Kennwort wiederholen"/>
+            android:text="@string/password_r"/>
 
         <EditText
             android:id="@+id/ediPass2"
@@ -87,7 +87,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:ems="30"
-            android:hint="re-password"/>
+            android:hint="@string/password_r"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -99,7 +99,7 @@
                 style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="zurück"
+                android:text="@string/back_button"
                 android:textAllCaps="false"
                 android:layout_below="@+id/editText5"
                 android:layout_alignEnd="@+id/editText5"

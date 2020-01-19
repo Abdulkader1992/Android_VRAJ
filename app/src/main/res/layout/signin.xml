@@ -13,12 +13,12 @@
 
     <TextView
         android:id="@+id/anmeldungBetreff1"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="66dp"
         android:gravity="center"
         android:textColor="#000"
         android:textSize="40sp"
-        android:text="Anmeldung"
+        android:text="@string/registration"
         android:layout_marginBottom="60dp"
         android:layout_marginTop="60dp"
         android:background="#eee"/>
@@ -36,7 +36,7 @@
             android:layout_marginTop="30dp"
             android:textColor="#000"
             android:textSize="20sp"
-            android:text="E-Mail"/>
+            android:text="@string/e_mail"/>
 
         <EditText
             android:id="@+id/ediUser1"
@@ -45,7 +45,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:ems="30"
-            android:hint="e-mail" />
+            android:hint="@string/e_mail" />
 
         <TextView
             android:id="@+id/passEingabe1"
@@ -55,7 +55,7 @@
             android:layout_marginTop="30dp"
             android:textColor="#000"
             android:textSize="20sp"
-            android:text="Kennwort"/>
+            android:text="@string/password"/>
 
         <EditText
             android:id="@+id/ediPass1"
@@ -65,7 +65,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:ems="30"
-            android:hint="password" />
+            android:hint="@string/password" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -77,7 +77,7 @@
                 style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="zurück"
+                android:text="@string/back_button"
                 android:textAllCaps="false"
                 android:layout_below="@+id/editText5"
                 android:layout_alignEnd="@+id/editText5"
@@ -89,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
-                android:text="anmelden"
+                android:text="@string/registrating"
                 android:textAllCaps="false"
                 android:layout_below="@+id/editText5"
                 android:layout_alignEnd="@+id/editText5"
@@ -105,11 +105,11 @@
             android:id="@+id/neuKonto"
             style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Haben Sie kein Konto?"
+            android:layout_height="33dp"
             android:background="@android:color/transparent"
-            android:textAllCaps="false"
-            android:enabled="true" />
+            android:enabled="true"
+            android:text="@string/have_not_count"
+            android:textAllCaps="false" />
     </LinearLayout>
 
 </LinearLayout>

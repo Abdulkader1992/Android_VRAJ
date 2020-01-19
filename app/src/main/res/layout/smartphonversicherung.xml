@@ -41,7 +41,7 @@
                 android:textColor="#000"
                 android:textSize="20sp"
                 android:layout_margin="10dp"
-                android:text="Hersteller"/>
+                android:text="@string/manufacturer"/>
 
             <Spinner
                 android:id="@+id/spinner1"
@@ -50,7 +50,7 @@
                 android:layout_height="?attr/dropdownListPreferredItemHeight"
                 android:background="@drawable/gradient_spinner"
                 android:ellipsize="marquee"
-                android:entries="@array/hersteller_arrays"
+                android:entries="@array/manufacturer_arrays"
                 android:textSize="18sp" />
 
             <TextView
@@ -61,7 +61,7 @@
                 android:textColor="#000"
                 android:textSize="20sp"
                 android:layout_marginBottom="10dp"
-                android:text="Gerätealter"/>
+                android:text="@string/devices_age"/>
 
             <Spinner
                 android:id="@+id/spinner2"
@@ -70,7 +70,7 @@
                 android:layout_height="?attr/dropdownListPreferredItemHeight"
                 android:background="@drawable/gradient_spinner"
                 android:ellipsize="marquee"
-                android:entries="@array/alter_arrays"
+                android:entries="@array/age_arrays"
                 android:textSize="18sp"/>
 
             <TextView
@@ -81,7 +81,7 @@
                 android:textColor="#000"
                 android:textSize="20sp"
                 android:layout_marginBottom="10dp"
-                android:text="Diebstahlschutz"/>
+                android:text="@string/theft_protection"/>
 
             <Spinner
                 android:id="@+id/spinner3"
@@ -90,7 +90,7 @@
                 android:layout_height="?attr/dropdownListPreferredItemHeight"
                 android:background="@drawable/gradient_spinner"
                 android:ellipsize="marquee"
-                android:entries="@array/diebstahl_arrays"
+                android:entries="@array/theft_protection_arrays"
                 android:textSize="18sp" />
 
             <TextView
@@ -101,7 +101,7 @@
                 android:textColor="#000"
                 android:textSize="20sp"
                 android:layout_marginBottom="10dp"
-                android:text="Kaufpreis in €"/>
+                android:text="@string/Purchase_price"/>
 
             <EditText
                 android:id="@+id/preisEingabe"
@@ -111,7 +111,7 @@
                 android:background="#fff"
                 android:textSize="20sp"
                 android:padding="10dp"
-                android:text="0"/>
+                android:text="@string/defaultnumber"/>
 
             <Button
                 android:id="@+id/btnSubmit"
@@ -120,7 +120,7 @@
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/gradient_button"
-                android:text="weiter"
+                android:text="@string/next_button"
                 android:textSize="20dp"
                 android:textAllCaps="false"
                 android:textColor="#000"/>
@@ -134,23 +134,19 @@
             android:layout_height="wrap_content"
             android:textColor="#000"
             android:textSize="20sp"
-            android:text="Häufige Fragen: "/>
+            android:text="@string/faq"/>
 
         <TextView
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:textColor="#000"
             android:textSize="10dp"
-            android:text="- Welche Schäden deckt VRAJ-Versicehrung ab?
-                        \n- Bei wem melde ich einen Schaden?
-                        \n- Wie lange dauert die Bearbeitung eines Schadensfall?
-                        \n- Was ist zu beachten, wenn ich als versicherte Person nicht der Käufer des Handys bin?
-                        \nDrücken Sie auf Informationen um die Antworten zu schauen"/>
+            android:text="@string/info_questions"/>
         <Button
             android:id="@+id/info"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:text="Informationen"
+            android:text="@string/information"
             android:textAllCaps="false"
             android:textColor="#000"/>
 

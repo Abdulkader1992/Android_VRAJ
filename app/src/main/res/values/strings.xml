@@ -4,7 +4,7 @@
     <string name="app_name">VRAJ</string>
     <string name="country_prompt">Wählen Sie Ihr Handymarkt aus</string>
 
-    <string-array name="hersteller_arrays">
+    <string-array name="manufacturer_arrays">
 
         <item>Huawei</item>
         <item>IPhone</item>
@@ -12,7 +12,7 @@
 
     </string-array>
 
-    <string-array name="alter_arrays">
+    <string-array name="age_arrays">
 
         <item>ein Monat oder weniger</item>
         <item>von 1 bis 6 Monate</item>
@@ -20,7 +20,7 @@
 
     </string-array>
 
-    <string-array name="diebstahl_arrays">
+    <string-array name="theft_protection_arrays">
 
         <item>Ja</item>
         <item>Nein</item>
@@ -84,5 +84,27 @@
     <string name="year">Jahr</string>
     <string name="remainingdebt">Restschuld</string>
     <string name="interests">Zinsen</string>
+    <string name="manufacturer">Hersteller</string>
+    <string name="devices_age">Gerätalter </string>
+    <string name="theft_protection">Diebstahlschutz </string>
+    <string name="tp">DsV </string>
+    <string name="Purchase_price">Kaufpreis in €</string>
+    <string name="next_button">weiter</string>
+    <string name="back_button">zurück</string>
+    <string name="info_questions">- Welche Schäden deckt VRAJ-Versicehrung ab?
+                        \n- Bei wem melde ich einen Schaden?
+                        \n- Wie lange dauert die Bearbeitung eines Schadensfall?
+                        \n- Was ist zu beachten, wenn ich als versicherte Person nicht der Käufer des Handys bin?
+                        \nDrücken Sie auf Informationen um die Antworten zu schauen</string>
+    <string name="result">Ergebnis</string>
+    <string name="monthly">monatlich: </string>
+    <string name="singup_subject">Registrierung</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="password">Kennwort</string>
+    <string name="password_r">Kennwort wiederholen</string>
+    <string name="registration">Anmeldung</string>
+    <string name="registrating">anmelden</string>
+    <string name="have_not_count">Haben Sie keine Konto? </string>
+
 
 </resources>
