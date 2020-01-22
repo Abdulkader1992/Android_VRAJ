@@ -3,6 +3,7 @@ package com.example.vraj;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,6 +37,13 @@ public class TilgungsPlanActivity extends AppCompatActivity {
 
         TextView geamtsummeview = (TextView) findViewById(R.id.gesamtsumme);
 
+        int idindex = 1;
+
+        Button grafischerTilgungsplanbtn = new Button(this);
+        grafischerTilgungsplanbtn.setId( idindex );
+        grafischerTilgungsplanbtn.setText("Grafischen Tilgungsplan erstellen");
+
+
         int kreditlaufzeit = tilgungsplanintent.getIntExtra("Kreditlaufzeit", 1);
         double kreditsumme = tilgungsplanintent.getFloatExtra("Kreditbetrag", 1);
         String Tilgungsform = tilgungsplanintent.getStringExtra("Tilgungsform");
@@ -45,7 +53,10 @@ public class TilgungsPlanActivity extends AppCompatActivity {
         int jahr =0;
         double rueckzahlungssumme = 0;
         double tilgung = 0;
-
+        double restschuld[] = new double[kreditlaufzeit];
+        double zinsenarray [] = new double[kreditlaufzeit];
+        double tilgungarray[] = new double[kreditlaufzeit];
+        double annuitatsrate [] = new double[kreditlaufzeit];
 
         DecimalFormat euro = new DecimalFormat("###,###.00€");
 
@@ -57,7 +68,7 @@ public class TilgungsPlanActivity extends AppCompatActivity {
             annuitat = tilgungsplanintent.getDoubleExtra("Rate", 1);
         }
 
-        for (int i = kreditlaufzeit; i >= 1; i--) { 
+        for (int i = kreditlaufzeit; i >= 1; i--) {
             // Creation row
             final TableRow tableRow = new TableRow(this);
             tableRow.setGravity(CENTER);
@@ -95,6 +106,7 @@ public class TilgungsPlanActivity extends AppCompatActivity {
                         break;
 
                     case 1:
+                        restschuld[i - 1] = kreditsumme;
                         text.setText(euro.format(kreditsumme));
                         if(i % 2 == 1) {
                             text.setBackgroundColor(Color.rgb(38, 234, 255));
@@ -105,6 +117,7 @@ public class TilgungsPlanActivity extends AppCompatActivity {
                         break;
 
                     case 2:
+                        zinsenarray[i - 1] = zinsen;
                         text.setText(euro.format(zinsen));
                         if(i % 2 == 0) {
                             text.setBackgroundColor(Color.rgb(38, 234, 255));
@@ -114,6 +127,7 @@ public class TilgungsPlanActivity extends AppCompatActivity {
                         break;
 
                     case 3:
+                        tilgungarray[i - 1] = tilgung;
                         text.setText(euro.format(tilgung));
                         if(i % 2 == 1) {
                             text.setBackgroundColor(Color.rgb(38, 234, 255));
@@ -123,6 +137,7 @@ public class TilgungsPlanActivity extends AppCompatActivity {
                         break;
 
                     case 4:
+                        annuitatsrate[i - 1] = annuitat;
                         text.setText(euro.format(annuitat));
                         if(Tilgungsform.equals("Tilgungsdarlehen")){
 
@@ -161,9 +176,14 @@ public class TilgungsPlanActivity extends AppCompatActivity {
         geamtsummeview.setText(euro.format(rueckzahlungssumme));
         Toast.makeText(this, String.valueOf(rueckzahlungssumme), Toast.LENGTH_SHORT).show();
 
+        tableLayout.addView( grafischerTilgungsplanbtn );
+        setOnClick( grafischerTilgungsplanbtn, kreditlaufzeit, restschuld, zinsenarray, tilgungarray, annuitatsrate );
 
 
-    }
+        }
+
+
+
     public double zinsenberechnunng(double kreditprozentfloatparameter, double kreditsummeparameter){
         double zinsen = kreditsummeparameter * kreditprozentfloatparameter - kreditsummeparameter;
         zinsen = Math.round(zinsen * 100.00) / 100.00;
@@ -181,7 +201,68 @@ public class TilgungsPlanActivity extends AppCompatActivity {
     }
 
 
+    private void setOnClick(final Button grafischerTilgungsplanbtnparameter, final int kreditlaufzeitparameter, final double restschuldparameter[], final double zinsenarrayparameter[], final double tilgungarray[], final double annuitatsrateparameter[]) { // Lösungsansatz von Stackoverflow übernommen: https://stackoverflow.com/questions/10614696/how-to-pass-parameters-to-onclicklistener/25399586
+        grafischerTilgungsplanbtnparameter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("Test", String.valueOf(kreditlaufzeitparameter));
 
-}
+                Intent tilgungschartintent = new Intent(getApplicationContext(), Tilgungschart.class);
+
+
+                Bundle restschuldbundle = new Bundle(  );
+                Bundle zinsenbundle = new Bundle(  );
+                Bundle tilgungsbudle = new Bundle(  );
+                Bundle annuitatbundle = new Bundle(  );
+
+
+                restschuldbundle.putDoubleArray("Restschuld", restschuldparameter);
+                zinsenbundle.putDoubleArray("Zinsen", zinsenarrayparameter);
+                tilgungsbudle.putDoubleArray("Tilgung", tilgungarray);
+                annuitatbundle.putDoubleArray("Annuitat", annuitatsrateparameter);
+
+
+                tilgungschartintent.putExtra("Kreditlaufzeit", kreditlaufzeitparameter);
+                tilgungschartintent.putExtra( "Restschuldbundle", restschuldbundle );
+                tilgungschartintent.putExtra( "Zinsenbundle", zinsenbundle );
+                tilgungschartintent.putExtra( "Tilgungbundle", tilgungsbudle );
+                tilgungschartintent.putExtra( "Annuitatbundle", annuitatbundle );
+
+                startActivity(tilgungschartintent);
+
+
+            }
+        });
+
+    }
+
+/*
+    private void setOnClick(final int kreditlaufzeitparameter, final double restschuldparameter[], final double zinsenarrayparameter[], final double tilgungarray[], final double annuitatsrateparameter[]) { // Lösungsansatz von Stackoverflow übernommen: https://stackoverflow.com/questions/10614696/how-to-pass-parameters-to-onclicklistener/25399586
+            public void onClick(View v) {
+
+
+
+                Intent tilgungschartintent = new Intent(getApplicationContext(), Tilgungschart.class);
+
+
+                Bundle array = tilgungschartintent.getExtras();
+
+
+                array.putDoubleArray("Restschuld", restschuldparameter);
+                array.putDoubleArray("Zinsen", zinsenarrayparameter);
+                array.putDoubleArray("Tilgung", tilgungarray);
+                array.putDoubleArray("Annuität", annuitatsrateparameter);
+
+
+                tilgungschartintent.putExtra("Kreditlaufzeit", kreditlaufzeitparameter);
+                startActivity(tilgungschartintent);
+
+
+            }
+        }*/
+
+    }
+
+
 
 
