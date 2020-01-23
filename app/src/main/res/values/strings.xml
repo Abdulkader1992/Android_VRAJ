@@ -57,7 +57,6 @@
         <item>Tilgungsdarlehnen</item>
         <item>Annuitätendarlehnen</item>
     </string-array>
-
     <string name="continue_button">Weiter</string>
     <string name="faq">Häufige Frage:</string>
     <string name="credit_faq">- Was ist der Unterschied zwischen den Tilgungsformen?
