@@ -92,8 +92,7 @@ public class KreditActivity extends AppCompatActivity implements View.OnClickLis
                 break;
         }
         }
-        public void KreditauswertungIntentMethod ( int laufzeitparameter,
-        float kreditbetragparameter, String tilgungsformparameter){
+        public void KreditauswertungIntentMethod ( int laufzeitparameter, float kreditbetragparameter, String tilgungsformparameter){
             Intent kreditauswertungintent = new Intent(getApplicationContext(), KreditauswertungActivity.class);
             kreditauswertungintent.putExtra("Laufzeit", laufzeitparameter);
             kreditauswertungintent.putExtra("Kreditbetrag", kreditbetragparameter);
