@@ -9,18 +9,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LeistungActivity extends AppCompatActivity implements View.OnClickListener
 {
-    Button Vergleichbtn, Kreditbtn, Versicherungbtn;
+    Button infoBtn, kreditbtn, versicherungbtn;
 
  @Override
     protected void onCreate(Bundle savedInstanceState)
  {
      super.onCreate(savedInstanceState);
      setContentView(R.layout.leistungsauswahl);
-     Kreditbtn = (Button)this.findViewById(R.id.kredit);
-     Versicherungbtn = (Button)this.findViewById(R.id.versicherung);
+     kreditbtn = (Button)this.findViewById(R.id.kredit);
+     versicherungbtn = (Button)this.findViewById(R.id.versicherung);
+     infoBtn = (Button) this.findViewById(R.id.btnWe);
 
-     Kreditbtn.setOnClickListener(this);
-     Versicherungbtn.setOnClickListener(this);
+
+     kreditbtn.setOnClickListener(this);
+     versicherungbtn.setOnClickListener(this);
+     infoBtn.setOnClickListener(this);
 
 
  }
@@ -37,6 +40,10 @@ public class LeistungActivity extends AppCompatActivity implements View.OnClickL
                 Intent Kreditintent = new Intent(getApplicationContext(), KreditActivity.class);
                 startActivity(Kreditintent);
                 break;
+
+            case R.id.btnWe:
+                Intent infoIntent = new Intent(getApplicationContext(), InfoActivity.class);
+                startActivity(infoIntent);
 
         }
     }

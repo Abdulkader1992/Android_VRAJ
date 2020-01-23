@@ -55,6 +55,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnWe:
                                                         // Konrakte Button
+                Intent infoIntent = new Intent(getApplicationContext(), InfoActivity.class);
+                startActivity(infoIntent);
                 break;
                                                         // Alternative
         }

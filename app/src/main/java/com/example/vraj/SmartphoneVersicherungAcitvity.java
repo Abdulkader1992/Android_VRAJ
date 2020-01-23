@@ -21,6 +21,7 @@ public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements
     private Button btnSubmitJ;
     private static EditText preisEingabe;
     private static Double versicherung;
+    private Button btnInfo;
 
 
     protected void onCreate(Bundle savedInstanceState)
@@ -32,9 +33,11 @@ public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements
         spinner2 = (Spinner) this.findViewById(R.id.spinner2);
         spinner3 = (Spinner) this.findViewById(R.id.spinner3);
         btnSubmitJ = (Button) this.findViewById(R.id.btnSubmit);
+        btnInfo = (Button) this.findViewById(R.id.info);
         preisEingabe = (EditText) this.findViewById(R.id.preisEingabe);
 
         btnSubmitJ.setOnClickListener(this);
+        btnInfo.setOnClickListener(this);
     }
                 // Spinner Rechnungen
 
@@ -226,6 +229,12 @@ public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements
                         Toast.makeText(this, fehlermeldung, Toast.LENGTH_SHORT).show();
                         break;
                     }
+                case R.id.info:
+
+                    Intent infoIntent = new Intent(getApplicationContext(), InfoActivity.class);
+                    startActivity(infoIntent);
+                    break;
+
                 default:
                     throw new IllegalStateException("\n" + "Unerwarteter Wert: " + v.getId());
             }

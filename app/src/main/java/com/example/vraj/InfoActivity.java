@@ -17,7 +17,7 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btnSubmit:
+
         }
     }
 }
