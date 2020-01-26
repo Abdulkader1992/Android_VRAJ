@@ -11,14 +11,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.DecimalFormat;
 
-public class KreditauswertungActivity extends AppCompatActivity {
+public class KreditauswertungActivity extends AppCompatActivity implements View.OnClickListener{
 
     TextView kredittextview;
     TextView prozenttextview;
     TextView persoenlichelaufzeitview;
     TextView ratenview;
     TextView ratentextview;
-    Button tilgungsplanbtn;
+    Button tilgungsplanbtn, beratung;
 
     DecimalFormat euro = new DecimalFormat("###,###.00€");
 
@@ -34,7 +34,9 @@ public class KreditauswertungActivity extends AppCompatActivity {
         ratenview = (TextView) this.findViewById(R.id.rate);
         ratentextview = (TextView) this.findViewById(R.id.ratentext);
         tilgungsplanbtn = (Button) this.findViewById(R.id.tilgungsplan);
+        beratung = (Button) this.findViewById(R.id.abschlissen);
 
+        beratung.setOnClickListener(this);
 
         Intent kreditauswertungintent = getIntent();
         int kreditlaufzeit = kreditauswertungintent.getIntExtra("Laufzeit", 1);
@@ -122,6 +124,16 @@ public class KreditauswertungActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId())
+        {
+            case R.id.abschlissen:
+                Intent vertragIntent = new Intent(getApplicationContext(), BeratungActivity.class);
+                startActivity(vertragIntent);
+        }
     }
 }
 

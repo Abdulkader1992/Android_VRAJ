@@ -111,7 +111,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="170dp"
-                android:text="Weiter"
+                android:text="@string/next_button"
                 android:textAllCaps="false"
                 android:layout_below="@+id/editText5"
                 android:layout_alignEnd="@+id/editText5"

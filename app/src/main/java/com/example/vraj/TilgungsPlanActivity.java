@@ -6,25 +6,18 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.TableRow;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.DecimalFormat;
 
 import static android.view.Gravity.CENTER;
-import static android.view.Gravity.LEFT;
-import static android.view.Gravity.RIGHT;
 
 public class TilgungsPlanActivity extends AppCompatActivity {
-
-
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);

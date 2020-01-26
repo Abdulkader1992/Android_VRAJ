@@ -58,7 +58,7 @@
         <item>Annuitätendarlehnen</item>
     </string-array>
     <string name="continue_button">Weiter</string>
-    <string name="faq">Häufige Frage:</string>
+    <string name="faq">Häufige Fragen:</string>
     <string name="credit_faq">- Was ist der Unterschied zwischen den Tilgungsformen?
         \n- Welche Tilgungsform ist günstiger? \n</string>
     <string name="information">Informationen</string>
@@ -98,12 +98,21 @@
     <string name="result">Ergebnis</string>
     <string name="monthly">monatlich: </string>
     <string name="singup_subject">Registrierung</string>
-    <string name="e_mail">E-Mail</string>
+    <string name="e_mail">mustermann@gmail.de</string>
+    <string name="mail">E-Mail</string>
     <string name="password">Kennwort</string>
     <string name="password_r">Kennwort wiederholen</string>
     <string name="registration">Anmeldung</string>
     <string name="registrating">anmelden</string>
     <string name="have_not_count">Haben Sie keine Konto? </string>
+    <string name="contract_send">Beratungstermin ausmachen</string>
+    <string name="c_subject">Versicherte Person</string>
+    <string name="nameEdit">Vorname</string>
+    <string name="lastnameEdit">Nachname</string>
+    <string name="berthdayEdit">01/01/1990</string>
+    <string name="date">Geburtsdatum</string>
+    <string name="adress">Adresse</string>
+
     <string name="info_seite"><b>VRAJ: <u>V</u>ersicherung <u>R</u>echner <u>A</u>bdulkader <u>J</u>ürgen</b>
         \n <b>Unsere Leistungen:</b>
         \  - Handyversicherung - Kredit
