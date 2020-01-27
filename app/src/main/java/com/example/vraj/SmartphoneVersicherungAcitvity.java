@@ -212,7 +212,7 @@ public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements
                             }
                         }
                     }
-                    if(preisZahl < 2500 && preisZahl >= 100) {
+                    if(preisZahl <= 2500 && preisZahl >= 100) {
                         Intent intent = new Intent(getApplicationContext(), HandyVersicherungErgebnisActivity.class);
                         startActivity(intent);
                         break;

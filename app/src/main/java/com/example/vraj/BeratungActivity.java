@@ -14,15 +14,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.DecimalFormat;
+
 @SuppressWarnings("deprecation")//
 public class BeratungActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText nameJ, lastnameJ, dateJ, mailJ;
     Button nextJ, backJ;
     String nameString, lastnameString ,dateString, mailString;
+
+    private String hersteller,alter,diebstahl,kaufpreis,zahlung;
+
     private FirebaseAuth auth;
     private ProgressDialog progressDialog;
-
+    DecimalFormat euro = new DecimalFormat("###,###.00€");
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +40,17 @@ public class BeratungActivity extends AppCompatActivity implements View.OnClickL
         nextJ = (Button) this.findViewById(R.id.nextV);
         backJ = (Button) this.findViewById(R.id.backV);
 
-
         nextJ.setOnClickListener(this);
         backJ.setOnClickListener(this);
 
         progressDialog = new ProgressDialog(this);
         auth = FirebaseAuth.getInstance();
+
+        hersteller = SmartphoneVersicherungAcitvity.herstellerView();
+        alter = SmartphoneVersicherungAcitvity.alterView();
+        diebstahl = SmartphoneVersicherungAcitvity.diebstahlView();
+        kaufpreis = SmartphoneVersicherungAcitvity.kaufpreisView();
+        zahlung = euro.format(SmartphoneVersicherungAcitvity.zahlungView());
     }
     public void register () {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
@@ -81,9 +91,16 @@ public class BeratungActivity extends AppCompatActivity implements View.OnClickL
                 i.putExtra(Intent.EXTRA_SUBJECT, "Beratungstermin");
                 i.putExtra(Intent.EXTRA_TEXT   , "Liebes\tTeam\tvom\tVRAJ,\n\n\n" +
                         "hiermit\tmöchte\tich\tfür\tdie\tkommenden\tTage\teinen\tverbindlichen\tBeratungstermin\tfür\t\n" +
-                        "eine\tDirektberatung\tvereinbaren.\n\nMeine\tpersönliche\tDaten:\n" +
+                        "eine\tDirektberatung\tvereinbaren.\n\nMeine\tpersönliche\tDaten:\n\n" +
                         "Name:\t" + nameString + "\t" + lastnameString + "\nGeburtsdatum:\t" + dateString +
-                        "\nE-Mail-Adresse:\t" + mailString + "\n\nVielen\tDank.\n\n" +
+                        "\nE-Mail-Adresse:\t" + mailString +
+                        "\n\nMeine\tWunsch-Leistung:" +
+                        "\n" + "Hersteller:\t" + hersteller +
+                        "\n" + "Alter:\t" + alter +
+                        "\n" + "Diebstalschutz:\t" + diebstahl +
+                        "\n" + "Kaufpreis:\t" + kaufpreis +
+                        "\n" + "Zahlung:\t" + zahlung +
+                        "\n\nVielen\tDank.\n\n" +
                         "Mit\tfreundlichen\tGrüßen" + "\n\n" + nameString);
                 try {
                     startActivity(Intent.createChooser(i, "Sende Mail..."));
