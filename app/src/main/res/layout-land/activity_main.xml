@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout
     android:layout_width="fill_parent"
@@ -15,13 +15,15 @@
     <TextView
         android:id="@+id/betreff"
         android:layout_width="200dp"
-        android:layout_height="50dp"
+        android:layout_height="40sp"
         android:gravity="center"
         android:textColor="#000"
-        android:textSize="40sp"
+        android:textSize="25sp"
         android:text="@string/app_name"
-        android:layout_marginBottom="60dp"
-        android:background="#eee"/>
+        android:layout_marginBottom="5dp"
+        android:background="#eee"
+        android:padding="4sp"
+        android:layout_marginTop="60sp"/>
 
     <!-- Background Photos-->
     <LinearLayout
@@ -30,13 +32,13 @@
         android:gravity="center"
         android:orientation="horizontal">
         <ImageView
-            android:layout_width="210dp"
-            android:layout_height="200dp"
+            android:layout_width="200sp"
+            android:layout_height="140dp"
             android:background="@drawable/bg1"/>
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_width="200sp"
+            android:layout_height="140dp"
             android:background="@drawable/bg2"/>
     </LinearLayout>
 
@@ -46,7 +48,7 @@
             android:id="@+id/btnSingIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="5dp"
             android:background="#7EE0F1"
             android:text="@string/signup"
             android:textAllCaps="false"
@@ -74,7 +76,7 @@
 
     <Button android:id="@+id/btnWe"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:textAllCaps="false"
         android:text="@string/aboutus"
         android:layout_marginTop="10dp"

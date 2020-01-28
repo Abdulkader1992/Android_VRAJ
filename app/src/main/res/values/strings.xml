@@ -52,7 +52,7 @@
         <item>6 Jahre</item>
         <item>7 Jahre</item>
     </string-array>
-    <string name="formofpayment">Kreditvolumen</string>
+    <string name="formofpayment">Tilgungsform</string>
     <string-array name="formofpayment_arrays">
         <item>Tilgungsdarlehnen</item>
         <item>Annuitätendarlehnen</item>

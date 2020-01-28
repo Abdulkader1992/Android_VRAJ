@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/head1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:text="@string/selectionofservices"
+            android:background="#eee"/>
+
+        <!-- Background Photos-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="200sp"
+                android:layout_height="150sp"
+                android:background="@drawable/bg1"/>
+
+            <TextView
+                android:layout_width="200sp"
+                android:layout_height="150sp"
+                android:background="@drawable/bg2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/versicherung"
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/mobilephoneinsurance"
+                android:textAllCaps="false"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/kredit"
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                android:text="@string/credit"
+                android:textAllCaps="false"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+        <Button android:id="@+id/btnWe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="@string/aboutus"
+            android:layout_marginTop="5sp"
+            android:background="#aaa"/>
+
+    </LinearLayout>
+</ScrollView>

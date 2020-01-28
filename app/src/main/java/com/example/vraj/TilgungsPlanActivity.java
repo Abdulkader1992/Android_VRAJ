@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -35,6 +36,7 @@ public class TilgungsPlanActivity extends AppCompatActivity {
         Button grafischerTilgungsplanbtn = new Button(this);
         grafischerTilgungsplanbtn.setId( idindex );
         grafischerTilgungsplanbtn.setText("Grafischen Tilgungsplan erstellen");
+        grafischerTilgungsplanbtn.setLayoutParams( new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.MarginLayoutParams.WRAP_CONTENT) );
 
 
         int kreditlaufzeit = tilgungsplanintent.getIntExtra("Kreditlaufzeit", 1);
