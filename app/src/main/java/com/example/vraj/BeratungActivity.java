@@ -40,6 +40,7 @@ public class BeratungActivity extends AppCompatActivity implements View.OnClickL
         nextJ = (Button) this.findViewById(R.id.nextV);
         backJ = (Button) this.findViewById(R.id.backV);
 
+
         nextJ.setOnClickListener(this);
         backJ.setOnClickListener(this);
 
@@ -85,6 +86,36 @@ public class BeratungActivity extends AppCompatActivity implements View.OnClickL
                     Toast.makeText(this, "Bitte geben Sie Ihre E-Mail-Adresse ein", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
+                DecimalFormat euro = new DecimalFormat("###,###.00€");
+
+
+                Intent vertragIntent = getIntent();
+                double rate = vertragIntent.getDoubleExtra( "Rate", 1 );
+                int kreditlaufzeit = vertragIntent.getIntExtra("Kreditlaufzeit", 1);
+                double kreditsumme = vertragIntent.getFloatExtra("Kreditbetrag", 1);
+                String Tilgungsform = vertragIntent.getStringExtra("Tilgungsform");
+                int kreditprozentfloat = vertragIntent.getIntExtra("Kreditprozent", 1);
+
+                String kreditkonditionen = "\n \n Meine berechneten Kreditkonditionen: \n \n Kreditsumme: " + euro.format(kreditsumme) + "\n Kreditlaufzeit: " + kreditlaufzeit + " Jahre\n" +
+                        " Tilgungsform: " + Tilgungsform + "\n Zinsen: " + kreditprozentfloat + "%" + "\n Rate: " + euro.format(rate);
+
+                String smartphonekonditionen =  "\n\nMeine\tWunsch-Leistung:" +
+                        "\n" + "Hersteller:\t" + hersteller +
+                        "\n" + "Alter:\t" + alter +
+                        "\n" + "Diebstalschutz:\t" + diebstahl +
+                        "\n" + "Kaufpreis:\t" + kaufpreis +
+                        "\n" + "Zahlung:\t" + zahlung +
+                        "\n\nVielen\tDank.\n\n";
+
+                String ausgabe;
+
+                if(Tilgungsform == "Tilungsdarlehnen" || Tilgungsform == "Annuiätendarlehnen") {
+                    ausgabe = smartphonekonditionen;
+                }else {
+                    ausgabe = kreditkonditionen;
+                }
+
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("message/rfc822");
                 i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"ebdo93@gmail.com"});
@@ -94,13 +125,7 @@ public class BeratungActivity extends AppCompatActivity implements View.OnClickL
                         "eine\tDirektberatung\tvereinbaren.\n\nMeine\tpersönliche\tDaten:\n\n" +
                         "Name:\t" + nameString + "\t" + lastnameString + "\nGeburtsdatum:\t" + dateString +
                         "\nE-Mail-Adresse:\t" + mailString +
-                        "\n\nMeine\tWunsch-Leistung:" +
-                        "\n" + "Hersteller:\t" + hersteller +
-                        "\n" + "Alter:\t" + alter +
-                        "\n" + "Diebstalschutz:\t" + diebstahl +
-                        "\n" + "Kaufpreis:\t" + kaufpreis +
-                        "\n" + "Zahlung:\t" + zahlung +
-                        "\n\nVielen\tDank.\n\n" +
+                         ausgabe +
                         "Mit\tfreundlichen\tGrüßen" + "\n\n" + nameString);
                 try {
                     startActivity(Intent.createChooser(i, "Sende Mail..."));

@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.DecimalFormat;
 
-public class KreditauswertungActivity extends AppCompatActivity implements View.OnClickListener{
+public class KreditauswertungActivity extends AppCompatActivity{
 
     TextView kredittextview;
     TextView prozenttextview;
@@ -36,7 +36,6 @@ public class KreditauswertungActivity extends AppCompatActivity implements View.
         tilgungsplanbtn = (Button) this.findViewById(R.id.tilgungsplan);
         beratung = (Button) this.findViewById(R.id.abschlissen);
 
-        beratung.setOnClickListener(this);
 
         Intent kreditauswertungintent = getIntent();
         int kreditlaufzeit = kreditauswertungintent.getIntExtra("Laufzeit", 1);
@@ -90,7 +89,7 @@ public class KreditauswertungActivity extends AppCompatActivity implements View.
         prozenttextview.setText(prozentstring);
         persoenlichelaufzeitview.setText(persoenlichelaufzeitstring);
 
-        setOnClick(rate, kreditbetrag, kreditprozentfloat, kreditlaufzeit, tilgungsform);
+        setOnClick(rate, kreditbetrag, kreditprozentfloat, kreditlaufzeit, tilgungsform, kreditprozent);
 
     }
 
@@ -108,7 +107,7 @@ public class KreditauswertungActivity extends AppCompatActivity implements View.
         return tilgungsrate;
     }
 
-    private void setOnClick(final double rateparameter, final float kreditbetragparameter, final float kreditprozentfloatparameter, final int kreditlaufzeitparameter, final String tilgungsformparameter) { // Lösungsansatz von Stackoverflow übernommen: https://stackoverflow.com/questions/10614696/how-to-pass-parameters-to-onclicklistener/25399586
+    private void setOnClick(final double rateparameter, final float kreditbetragparameter, final float kreditprozentfloatparameter, final int kreditlaufzeitparameter, final String tilgungsformparameter, final int kreditprozentparameter) { // Lösungsansatz von Stackoverflow übernommen: https://stackoverflow.com/questions/10614696/how-to-pass-parameters-to-onclicklistener/25399586
         tilgungsplanbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -124,18 +123,23 @@ public class KreditauswertungActivity extends AppCompatActivity implements View.
             }
         });
 
-    }
+        beratung.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId())
-        {
-            case R.id.abschlissen:
                 Intent vertragIntent = new Intent(getApplicationContext(), BeratungActivity.class);
+                vertragIntent.putExtra("Rate", rateparameter);
+                vertragIntent.putExtra("Kreditbetrag", kreditbetragparameter);
+                vertragIntent.putExtra("Kreditprozent",kreditprozentparameter);
+                vertragIntent.putExtra("Kreditlaufzeit", kreditlaufzeitparameter);
+                vertragIntent.putExtra("Tilgungsform", tilgungsformparameter);
                 startActivity(vertragIntent);
+            }
+            });
         }
-    }
-}
+        }
+
+
 
 
 
