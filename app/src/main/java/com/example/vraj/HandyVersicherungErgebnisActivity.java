@@ -55,7 +55,7 @@ public class HandyVersicherungErgebnisActivity extends AppCompatActivity impleme
                 startActivity(infoIntent);
                 break;
             case R.id.abschlissen:
-                Intent vertragIntent = new Intent(getApplicationContext(), BeratungActivity.class);
+                Intent vertragIntent = new Intent(getApplicationContext(), BeratungHandyActivity.class);
                 startActivity(vertragIntent);
         }
     }

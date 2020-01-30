@@ -27,7 +27,8 @@
         <activity android:name=".TilgungsPlanActivity"></activity>
         <activity android:name=".InfoActivity"></activity>
         <activity android:name=".Tilgungschart"></activity>
-        <activity android:name=".BeratungActivity"></activity>
+        <activity android:name=".BeratungHandyActivity"></activity>
+        <activity android:name=".BeratungKreditActivity"></activity>
         <activity android:name=".CreateActivity"></activity>
     </application>
 

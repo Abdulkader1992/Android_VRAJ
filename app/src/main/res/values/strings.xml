@@ -109,7 +109,8 @@
     <string name="registrating">Anmelden</string>
     <string name="have_not_count">Haben Sie kein Konto? </string>
     <string name="contract_send">Beratungstermin ausmachen</string>
-    <string name="c_subject">Versicherte Person</string>
+    <string name="c_subject_handy">Versicherte Person</string>
+    <string name="c_subject_kredit">Kreditnehmer Daten</string>
     <string name="nameEdit">Vorname</string>
     <string name="lastnameEdit">Nachname</string>
     <string name="berthdayEdit">01/01/1990</string>

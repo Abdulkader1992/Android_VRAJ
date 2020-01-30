@@ -127,7 +127,7 @@ public class KreditauswertungActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
 
-                Intent vertragIntent = new Intent(getApplicationContext(), BeratungActivity.class);
+                Intent vertragIntent = new Intent(getApplicationContext(), BeratungKreditActivity.class);
                 vertragIntent.putExtra("Rate", rateparameter);
                 vertragIntent.putExtra("Kreditbetrag", kreditbetragparameter);
                 vertragIntent.putExtra("Kreditprozent",kreditprozentparameter);

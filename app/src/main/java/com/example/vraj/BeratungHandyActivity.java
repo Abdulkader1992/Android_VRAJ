@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.text.DecimalFormat;
 
 @SuppressWarnings("deprecation")//
-public class BeratungActivity extends AppCompatActivity implements View.OnClickListener {
+public class BeratungHandyActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText nameJ, lastnameJ, dateJ, mailJ;
     Button nextJ, backJ;
@@ -32,7 +32,7 @@ public class BeratungActivity extends AppCompatActivity implements View.OnClickL
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.beratung);
+        setContentView(R.layout.beratung_handy);
         nameJ = (EditText) this.findViewById(R.id.vornameEingabe);
         lastnameJ = (EditText) this.findViewById(R.id.nachnameEingabe);
         dateJ = (EditText) this.findViewById(R.id.geburtsdatumEingabe);
@@ -130,7 +130,7 @@ public class BeratungActivity extends AppCompatActivity implements View.OnClickL
                 try {
                     startActivity(Intent.createChooser(i, "Sende Mail..."));
                 } catch (android.content.ActivityNotFoundException ex) {
-                    Toast.makeText(BeratungActivity.this, "Es sind keine Mail-Clients installiert, weshalb die Mail nicht versendet werden kann.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(BeratungHandyActivity.this, "Es sind keine Mail-Clients installiert, weshalb die Mail nicht versendet werden kann.", Toast.LENGTH_LONG).show();
                 }
                 break;
             case R.id.backV:
