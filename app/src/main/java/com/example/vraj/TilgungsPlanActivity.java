@@ -56,7 +56,7 @@ public class TilgungsPlanActivity extends AppCompatActivity {
         DecimalFormat euro = new DecimalFormat("###,###.00€");
 
 
-        if(Tilgungsform.equals("Tilgungsdarlehnen")){
+        if(Tilgungsform.equals("Tilgungsdarlehen")){
             annuitat = 0;
             tilgung = tilgungsplanintent.getDoubleExtra("Rate", 1);
         }else {
@@ -80,7 +80,7 @@ public class TilgungsPlanActivity extends AppCompatActivity {
 
                 zinsen = zinsenberechnunng(kreditprozentfloat, kreditsumme);
 
-                if(Tilgungsform.equals("Annuitätendarlehnen")){
+                if(Tilgungsform.equals("Annuitätendarlehen")){
                     tilgung = annuitattilgungberechnung(annuitat, zinsen);
                 }
 
@@ -134,18 +134,13 @@ public class TilgungsPlanActivity extends AppCompatActivity {
                     case 4:
                         annuitatsrate[i - 1] = annuitat;
                         text.setText(euro.format(annuitat));
-                        if(Tilgungsform.equals("Tilgungsdarlehen")){
 
-
-                            rueckzahlungssumme = rueckzahlungssumme + annuitat;
-
-                        }else{
                             kreditsumme = kreditsumme - tilgung;
 
                             rueckzahlungssumme = rueckzahlungssumme + annuitat;
 
 
-                        }
+
                         if(i % 2 == 0) {
                             text.setBackgroundColor(Color.rgb(38, 234, 255));
                         }else{
@@ -230,31 +225,6 @@ public class TilgungsPlanActivity extends AppCompatActivity {
         });
 
     }
-
-/*
-    private void setOnClick(final int kreditlaufzeitparameter, final double restschuldparameter[], final double zinsenarrayparameter[], final double tilgungarray[], final double annuitatsrateparameter[]) { // Lösungsansatz von Stackoverflow übernommen: https://stackoverflow.com/questions/10614696/how-to-pass-parameters-to-onclicklistener/25399586
-            public void onClick(View v) {
-
-
-
-                Intent tilgungschartintent = new Intent(getApplicationContext(), Tilgungschart.class);
-
-
-                Bundle array = tilgungschartintent.getExtras();
-
-
-                array.putDoubleArray("Restschuld", restschuldparameter);
-                array.putDoubleArray("Zinsen", zinsenarrayparameter);
-                array.putDoubleArray("Tilgung", tilgungarray);
-                array.putDoubleArray("Annuität", annuitatsrateparameter);
-
-
-                tilgungschartintent.putExtra("Kreditlaufzeit", kreditlaufzeitparameter);
-                startActivity(tilgungschartintent);
-
-
-            }
-        }*/
 
     }
 

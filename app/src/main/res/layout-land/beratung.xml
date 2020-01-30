@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@android:drawable/editbox_background">
+
+        <TextView
+            android:id="@+id/contract_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140sp"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="35sp"
+            android:text="@string/c_subject"
+            android:layout_marginBottom="5dp"
+            android:background="#eee"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/vorname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:text="@string/nameEdit"/>
+
+            <EditText
+                android:id="@+id/vornameEingabe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:ems="30"
+                android:hint="@string/nameEdit" />
+
+            <TextView
+                android:id="@+id/nachname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:text="@string/lastnameEdit"/>
+
+            <EditText
+                android:id="@+id/nachnameEingabe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:ems="30"
+                android:hint="@string/lastnameEdit" />
+
+            <TextView
+                android:id="@+id/geburtsdatum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:text="@string/date"/>
+
+            <EditText
+                android:id="@+id/geburtsdatumEingabe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="datetime"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:ems="30"
+                android:hint="@string/berthdayEdit"/>
+
+            <TextView
+                android:id="@+id/emailV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:text="@string/mail"/>
+
+            <EditText
+                android:id="@+id/emailVEingabe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:ems="30"
+                android:hint="@string/e_mail"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/backV"
+                    style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/back_button"
+                    android:textAllCaps="false"
+                    android:layout_below="@+id/editText5"
+                    android:layout_alignEnd="@+id/editText5"
+                    android:enabled="true" />
+
+                <Button
+                    android:id="@+id/nextV"
+                    style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="170dp"
+                    android:text="@string/next_button"
+                    android:textAllCaps="false"
+                    android:layout_below="@+id/editText5"
+                    android:layout_alignEnd="@+id/editText5"
+                    android:enabled="true" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

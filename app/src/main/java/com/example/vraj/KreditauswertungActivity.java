@@ -60,7 +60,7 @@ public class KreditauswertungActivity extends AppCompatActivity{
         }
 
 
-        if (tilgungsform.equals("Tilgungsdarlehnen")) {
+        if (tilgungsform.equals("Tilgungsdarlehen")) {
             rate = tilgungsberechnung(kreditlaufzeit, kreditbetrag);
             ratentext = getString(R.string.yearlyrepaymentrate);
             hinweis = "\n" + getString(R.string.plusvariableinterest);

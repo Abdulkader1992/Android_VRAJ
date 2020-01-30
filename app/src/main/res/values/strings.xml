@@ -54,10 +54,12 @@
     </string-array>
     <string name="formofpayment">Tilgungsform</string>
     <string-array name="formofpayment_arrays">
-        <item>Tilgungsdarlehnen</item>
-        <item>Annuitätendarlehnen</item>
+        <item>Tilgungsdarlehen</item>
+        <item>Annuitätendarlehen</item>
     </string-array>
-
+    <string name="annuity">Annuitätendarlehen</string>
+    <string name="repayment">Tilgungsdarlehen</string>
+    
     <string name="continue_button">Weiter</string>
     <string name="faq">Häufige Fragen:</string>
     <string name="credit_faq">- Was ist der Unterschied zwischen den Tilgungsformen?
@@ -74,28 +76,28 @@
     <string name="annualpercentagerate">Jährlicher Prozentsatz</string>
 
     <string name="yearlyrepaymentrate">Jährliche Tilgungsrate</string>
-    <string name="repaymentrate">Tilgungsrate</string>
+    <string name="repaymentrate">Tilgungs- \n rate</string>
 
-    <string name="plusvariableinterest">zzgl. varialber Zinsen</string>
-    <string name="annuityrate">Annuitätsrate</string>
-    <string name="createrepaymentplan">Tilgungsplan \n erstellen</string>
+    <string name="plusvariableinterest">Zzgl. variabler Zinsen</string>
+    <string name="annuityrate">Annuitäts- \n rate</string>
+    <string name="createrepaymentplan">Tilgungsplan Erstellen</string>
 
     <string name="repaymentamount">Rückzahlungsumme:</string>
-    <string name="year">Jahr</string>
-    <string name="remainingdebt">Restschuld</string>
-    <string name="interests">Zinsen</string>
+    <string name="year">Jahr \n</string>
+    <string name="remainingdebt">Rest- \nschuld</string>
+    <string name="interests">Zinsen \n</string>
     <string name="manufacturer">Hersteller</string>
-    <string name="devices_age">Gerätalter </string>
+    <string name="devices_age">Gerätealter </string>
     <string name="theft_protection">Diebstahlschutz </string>
     <string name="tp">DsV </string>
     <string name="Purchase_price">Kaufpreis in €</string>
-    <string name="next_button">weiter</string>
-    <string name="back_button">zurück</string>
-    <string name="info_questions">- Welche Schäden deckt VRAJ-Versicehrung ab?
+    <string name="next_button">Weiter</string>
+    <string name="back_button">Zurück</string>
+    <string name="info_questions">- Welche Schäden deckt VRAJ-Versicherung ab?
                         \n- Bei wem melde ich einen Schaden?
                         \n- Wie lange dauert die Bearbeitung eines Schadenfalls?
                         \n- Was ist zu beachten, wenn ich als versicherte Person nicht der Käufer des Handys bin?
-                        \nDrücken Sie auf Informationen um die Antworten zu schauen</string>
+                        \nDrücken Sie auf Informationen, um die Antworten zu schauen</string>
     <string name="result">Ergebnis</string>
     <string name="monthly">monatlich: </string>
     <string name="singup_subject">Registrierung</string>
@@ -104,8 +106,8 @@
     <string name="password">Kennwort</string>
     <string name="password_r">Kennwort wiederholen</string>
     <string name="registration">Anmeldung</string>
-    <string name="registrating">anmelden</string>
-    <string name="have_not_count">Haben Sie keine Konto? </string>
+    <string name="registrating">Anmelden</string>
+    <string name="have_not_count">Haben Sie kein Konto? </string>
     <string name="contract_send">Beratungstermin ausmachen</string>
     <string name="c_subject">Versicherte Person</string>
     <string name="nameEdit">Vorname</string>
@@ -120,13 +122,9 @@
         \n
         \n<b>*Handyversicherung:</b>
         \n
-        \n  <b>- Display- und Bruchschäden: Displaybruch </b>ist der häufigste Handyschaden. Dabei fällt das Handy auch meist nicht direkt aus der Hand.
-        \n  - Flüssigkeitsschäden: Bei Flüssigkeitsschäden oder Wasserschäden gibt es die glimpflichen Situationen in denen der Bildschirm trocken gewischt wird und alles noch funktioniert. Aber dann sind da noch die Situationen in denen das Handy ein Vollbad genommen hat und nicht mehr reagiert. Oft enden diese in einem Totalschaden
+        \n  <b>- Display- und Bruchschäden: Displaybruch </b>ist der häufigste Handy Schaden. Dabei fällt das Handy auch meist nicht direkt aus der Hand.
+        \n  - Flüssigkeitsschäden: Bei Flüssigkeitsschäden oder Wasserschäden gibt es die glimpflichen Situationen, in denen der Bildschirm trocken gewischt wird und alles noch funktioniert. Aber dann sind da noch die Situationen, in denen das Handy ein Vollbad genommen hat und nicht mehr reagiert. Oft enden diese in einem Total Schaden
         \n  - Handy-Diebstahl: Die Friendsurance Handyversicherung mit Diebstahlschutz übernimmt sowohl einfachen Diebstahl (Handy wurde in einer verschlossenen Tasche oder nah am Körper, z.B. in der Jackeninnentasche mitgeführt und trotzdem gestohlen), als auch Einbruchdiebstahl (das Handy wurde aus einem geschlossenen Raum gestohlen, durch gewaltsames Eindringen) und Raub (Ihnen wurde mit Gewalt gedroht, wenn Sie das Handy nicht hergeben). Diebstahl gehört zu den teuersten Schäden, weil das Handy gänzlich ersetzt werden muss.
-        \n
-        \n<b>*Kredit:</b>
-        \n-Tilungsdarlehenen
-        \n-Annuitätendarlehenen
         \n
         \n<b>Häufige Fragen:</b>
         \n
@@ -145,46 +143,46 @@
         \n  - Unsere Versicherer arbeiten mit unterschiedlichen Reparaturdienstleistern. Die Reparatur dauert, abhängig vom Anbieter, zwischen zwei bis zehn Werktage. Sie können uns helfen, diese Zeit zu verkürzen, indem Sie uns direkt alle notwendigen Unterlagen – zum Beispiel Kaufbeleg und Schadensmeldung – zusammen mit dem defekten Gerät einsenden. Details hierzu entnehmen Sie bitte der Anleitung, die wir Ihnen im Schadensfall zukommen lassen.
         \n
         \n
-        \n<b>Wichtig: Damit Ihr Schaden schnellstmöglich bearbeitet wird und Sie Ihr Handy schnell wieder benutzen können, sollten Sie ihn umgehend der Handyversicherung melden. Generell haben Sie laut HandySchutzbrief von Assurant Solutions die Pflicht, diesen bis 14 Tage nach Entdecken zu melden. Sonst ist die Versicherung nicht verpflichtet, den Schaden zu regulieren.</b>
+        \n<b>Wichtig: Damit Ihr Schaden schnellstmöglich bearbeitet wird und Sie Ihr Handy schnell wieder benutzen können, sollten Sie ihn umgehend der Handyversicherung melden. Generell haben Sie laut Handy Schutzbrief von Assurant Solutions die Pflicht, diesen bis 14 Tage nach Entdecken zu melden. Sonst ist die Versicherung nicht verpflichtet, den Schaden zu regulieren.</b>
         \n
         \n<b>*Kredit</b>
         \n
-        \n<b>Was ist der Unterschied zwischen Tilungs- und Annuitätendarlehenen?</b>
+        \n<b>Was ist der Unterschied zwischen Tilungs- und Annuitätendarlehnen?</b>
         \n
-        \n Bei einem Annuitäten Darlehnen ist die Summe, die man nach einem bestimmten Intervall zurückzahlen muss, zu jeder Zeit gleich.\n
-         Bei einem Tilgungsdarlehnen dagegen ist der  Tilgungsbetrag immer gleich. \n
+        \n Bei einem Annuitäten Darlehen ist die Summe, die man nach einem bestimmten Intervall zurückzahlen muss, zu jeder Zeit gleich.\n
+         Bei einem Tilgungsdarlehen dagegen ist der Tilgungsbetrag immer gleich. \n
         Die Annuität, also die Rückzahlungssumme bei einer Rate, setzt sich aus zwei Komponenten zusammen:
         \n
         \n
          - Den Zinsen und \n
          - der Tilgungsrate \n
         \n
-         Die Tilgungsrate beschreibt dabei die Summe die man für die Rückzahlung des Kredits aufwendet. \n
+         Die Tilgungsrate beschreibt dabei die Summe, die man für die Rückzahlung des Kredits aufwendet. \n
          Die Zinsen werden auf Basis der Restschuld berechnet.
         \n
         \n <b>Vor- und Nachteile der Tilgungsformen</b> \n
         \n
         <b>Vorteile Tilgung</b>\n
         \n
-        - Der Tilgungsdarlehnen ist im Vergleich zum Annuiätendarlehnen günstiger. \n
+        - Der Tilgungsdarlehen ist im Vergleich zum Annuiätendarlehnen günstiger. \n
         \n
-        - Der Tilgungsbetrag ist von Anfang höher, was schlussendlich dazu führt das man weniger Zinsen zurückzahlen muss. \n
+        - Der Tilgungsbetrag ist von Anfang höher, was schlussendlich dazu führt, dass man weniger Zinsen zurückzahlen muss. \n
         \n
         <b>Nachteile Tilgung</b> \n
         \n
-        Die Rate die man in einem bestimmten Intervall an die Bank zurürck zahlen muss ist nicht immer gleich! Was schlechtere Planungsicherheit bringt. \n
+        Die Rate die man in einem bestimmten Intervall an die Bank zurück zahlen muss, ist nicht immer gleich! Was schlechtere Planungssicherheit bringt. \n
         \n
-        - Die Finanzielle Belastung ist am Anfang höher als bei dem Annuiätendarlehnen, was sich aber mit dem weiteren Verlauf aber umkehrt. \n
+        - Die finanzielle Belastung ist am Anfang höher als bei dem Annuiätendarlehen, was sich aber mit dem weiteren Verlauf aber umkehrt. \n
         \n
         <b>Vorteile Annuität</b> \n
         \n
-        - Die Ratenzahlung, besser gesagt die Annuität, die man an die Bank zurückzahlt ist immer gleich! Was zu Planungsicherheit führt. \n
+        - Die Ratenzahlung, besser gesagt die Annuität, die man an die Bank zurückzahlt, ist immer gleich! Was zu Planungssicherheit führt. \n
         \n
-        - Die anfängliche Belastung ist im Vergleich zum Tilgungsdarlehnen geringer, was sich allerdings mit der Zeit umgekehrt. \n
+        - Die anfängliche Belastung ist im Vergleich zum Tilgungsdarlehen geringer, was sich allerdings mit der Zeit umgekehrt. \n
         \n
         <b>Nachteile Annuität</b> \n
         \n
-        - Die Annuiätendarlehnen ist teurer als der Tilgungsdarlehnen!
+        - Die Annuiätendarlehen ist teurer als der Tilgungsdarlehen!
     </string>
 
 </resources>
