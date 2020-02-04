@@ -82,7 +82,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(SignupActivity.this, "die Dateien wurde erfolgreich gespeichert", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(SignupActivity.this, "Die Dateien wurde erfolgreich gespeichert", Toast.LENGTH_SHORT).show();
                                         progressDialog.dismiss();
                                     } else {
                                         Toast.makeText(SignupActivity.this, "E-Mail ist nicht gültig oder ist bereits vergeben, bitte versuchen Sie noch ein mal", Toast.LENGTH_SHORT).show();

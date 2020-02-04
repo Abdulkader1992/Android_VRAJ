@@ -36,7 +36,7 @@
             android:layout_marginTop="30dp"
             android:textColor="#000"
             android:textSize="20sp"
-            android:text="@string/e_mail"/>
+            android:text="@string/mail"/>
 
         <EditText
             android:id="@+id/ediUser1"
