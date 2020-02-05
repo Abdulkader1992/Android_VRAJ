@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -21,7 +22,8 @@ public class BeratungKreditActivity extends AppCompatActivity implements View.On
 
     EditText nameJ, lastnameJ, dateJ, mailJ;
     Button nextJ, backJ;
-    String nameString, lastnameString ,dateString, mailString;
+    String nameString, lastnameString, mailString;
+    DatePicker picker;
 
     private Intent vertragIntent;
 
@@ -32,13 +34,13 @@ public class BeratungKreditActivity extends AppCompatActivity implements View.On
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.beratung_kredit);
+        setContentView(R.layout.beratung);
         nameJ = (EditText) this.findViewById(R.id.vornameEingabe);
         lastnameJ = (EditText) this.findViewById(R.id.nachnameEingabe);
-        dateJ = (EditText) this.findViewById(R.id.geburtsdatumEingabe);
         mailJ = (EditText) this.findViewById(R.id.emailVEingabe);
         nextJ = (Button) this.findViewById(R.id.nextV);
         backJ = (Button) this.findViewById(R.id.backV);
+        picker = (DatePicker) this.findViewById(R.id.datePicker1);
 
         vertragIntent = getIntent();
         double rate = vertragIntent.getDoubleExtra("Rate", 1);
@@ -59,7 +61,6 @@ public class BeratungKreditActivity extends AppCompatActivity implements View.On
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         nameString = nameJ.getText().toString().trim();
         lastnameString = lastnameJ.getText().toString().trim();
-        dateString = dateJ.getText().toString().trim();
         mailString = mailJ.getText().toString().trim();
     }
 
@@ -77,11 +78,6 @@ public class BeratungKreditActivity extends AppCompatActivity implements View.On
                 if (TextUtils.isEmpty(lastnameString))
                 {
                     Toast.makeText(this, "Bitte geben Sie Ihr Nachname ein", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if (TextUtils.isEmpty(dateString))
-                {
-                    Toast.makeText(this, "Bitte geben Sie die Anrede ein", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty(mailString)) {
@@ -107,12 +103,13 @@ public class BeratungKreditActivity extends AppCompatActivity implements View.On
 
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("message/rfc822");
-                i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"ebdo93@gmail.com"});
+                i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"ebdo93@gmail.com","juergen-mayer.1@gmx.de"});
                 i.putExtra(Intent.EXTRA_SUBJECT, "Beratungstermin");
                 i.putExtra(Intent.EXTRA_TEXT   , "Liebes\tTeam\tvom\tVRAJ,\n\n\n" +
                         "hiermit\tmöchte\tich\tfür\tdie\tkommenden\tTage\teinen\tverbindlichen\tBeratungstermin\tfür\t\n" +
                         "eine\tDirektberatung\tvereinbaren.\n\nMeine\tpersönliche\tDaten:\n\n" +
-                        "Name:\t" + nameString + "\t" + lastnameString + "\nGeburtsdatum:\t" + dateString +
+                        "Name:\t" + nameString + "\t" + lastnameString +
+                        "\nGeburtsdatum:\t" + picker.getDayOfMonth() + "." + picker.getMonth() + "." + picker.getYear() +
                         "\nE-Mail-Adresse:\t" + mailString +
                         kreditkonditionen +
                         "\n\nVielen\tDank.\n\n" +
@@ -125,8 +122,6 @@ public class BeratungKreditActivity extends AppCompatActivity implements View.On
                 }
                 break;
             case R.id.backV:
-                //Intent createIntent = new Intent(getApplicationContext(), CreateActivity.class);
-                //startActivity(createIntent);
                 finish();
                 break;
 
