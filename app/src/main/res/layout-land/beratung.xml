@@ -89,7 +89,8 @@
                     android:datePickerMode="spinner"
                     android:calendarViewShown="false"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp" />
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"/>
 
                 <TextView
                     android:id="@+id/emailV"
@@ -115,7 +116,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:layout_marginBottom="20sp">
                     <Button
                         android:id="@+id/backV"
                         style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
