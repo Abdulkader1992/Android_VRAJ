@@ -13,7 +13,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -22,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 @SuppressWarnings("ALL")
 public class SigninActivity extends AppCompatActivity implements View.OnClickListener {
     Button btnBack, btnNext, neuKonto;
-    EditText userEingabe, passEingabe;
+    static EditText userEingabe, passEingabe;
     Context context;
     String email, password;
     private ProgressDialog dialog;
@@ -53,14 +52,6 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
          password = passEingabe.getText().toString().trim();
 
     }
-    void singInGoogle()
-    {
-        // Konfiguration Google Sign In
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build();
-    }
     public void onClick(View v) {
         switch (v.getId())
         {
@@ -73,7 +64,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
                 userCheck();
                 if(TextUtils.isEmpty(email))
                 {
-                    Toast.makeText(this, "Bitte geben Sie Ihren Username ein", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Bitte geben Sie Ihre E-Mail Adresse ein", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 else if (TextUtils.isEmpty(password))
@@ -91,13 +82,13 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
                                 public void onComplete(@NonNull Task<AuthResult> task)
                                 {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(SigninActivity.this, "Richtig", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(SigninActivity.this, "Willkommen zu unserer Leistung", Toast.LENGTH_SHORT).show();
                                         dialog.dismiss();
                                         Intent leistungsauswahlintent = new Intent(getApplicationContext(), LeistungActivity.class);
                                         startActivity(leistungsauswahlintent);
 
                                     } else {
-                                        Toast.makeText(SigninActivity.this, "Ihr Konto oder Kennwort ist nicht korrekt.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(SigninActivity.this, "Ihre E-Mail Adresse oder Kennwort ist nicht richtig.", Toast.LENGTH_SHORT).show();
                                         dialog.dismiss();
                                     }
                                 }
@@ -105,8 +96,14 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
                     }
                 break;
             case R.id.backB1:
-                finish();
+                Intent mainIntent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(mainIntent);
                 break;
         }
+    }
+    public static String getEmail()
+    {
+        String email = userEingabe.getText().toString();
+        return email;
     }
 }

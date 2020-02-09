@@ -25,18 +25,17 @@ public class LeistungActivity extends AppCompatActivity implements View.OnClickL
      versicherungbtn.setOnClickListener(this);
      infoBtn.setOnClickListener(this);
 
-
  }
     public void onClick(View v) {
 
         switch (v.getId())
         {
-            case R.id.versicherung:                                        // Start der Smartphone Versicherungsvergleich
+            case R.id.versicherung:
                 Intent Smartphoneintent = new Intent(getApplicationContext(), SmartphoneVersicherungAcitvity.class);
                 startActivity(Smartphoneintent);
                 break;
 
-            case R.id.kredit:                             // Start des KreditActivity Vergleichs
+            case R.id.kredit:
                 Intent Kreditintent = new Intent(getApplicationContext(), KreditActivity.class);
                 startActivity(Kreditintent);
                 break;

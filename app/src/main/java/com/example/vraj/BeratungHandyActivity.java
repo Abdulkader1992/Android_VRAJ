@@ -1,6 +1,5 @@
 package com.example.vraj;
 
-import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,18 +17,17 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.DecimalFormat;
 
-@SuppressWarnings("deprecation")//
+
 public class BeratungHandyActivity extends AppCompatActivity implements View.OnClickListener {
 
-    EditText nameJ, lastnameJ, dateJ, mailJ;
+    EditText nameJ, lastnameJ;
     DatePicker picker;
     Button nextJ, backJ;
-    String nameString, lastnameString , mailString;
+    String nameString, lastnameString , mailSignin;
 
     private String hersteller,alter,diebstahl,kaufpreis,zahlung;
 
     private FirebaseAuth auth;
-    private ProgressDialog progressDialog;
     DecimalFormat euro = new DecimalFormat("###,###.00€");
     @Override
 
@@ -38,7 +36,6 @@ public class BeratungHandyActivity extends AppCompatActivity implements View.OnC
         setContentView(R.layout.beratung);
         nameJ = (EditText) this.findViewById(R.id.vornameEingabe);
         lastnameJ = (EditText) this.findViewById(R.id.nachnameEingabe);
-        mailJ = (EditText) this.findViewById(R.id.emailVEingabe);
         nextJ = (Button) this.findViewById(R.id.nextV);
         backJ = (Button) this.findViewById(R.id.backV);
         picker = (DatePicker) this.findViewById(R.id.datePicker1);
@@ -47,7 +44,6 @@ public class BeratungHandyActivity extends AppCompatActivity implements View.OnC
         nextJ.setOnClickListener(this);
         backJ.setOnClickListener(this);
 
-        progressDialog = new ProgressDialog(this);
         auth = FirebaseAuth.getInstance();
 
         hersteller = SmartphoneVersicherungAcitvity.herstellerView();
@@ -60,7 +56,8 @@ public class BeratungHandyActivity extends AppCompatActivity implements View.OnC
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         nameString = nameJ.getText().toString().trim();
         lastnameString = lastnameJ.getText().toString().trim();
-        mailString = mailJ.getText().toString().trim();
+        mailSignin = SigninActivity.getEmail();
+
     }
 
     public void onClick(View v) {
@@ -79,22 +76,10 @@ public class BeratungHandyActivity extends AppCompatActivity implements View.OnC
                     Toast.makeText(this, "Bitte geben Sie Ihr Nachname ein", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (TextUtils.isEmpty(mailString)) {
-                    Toast.makeText(this, "Bitte geben Sie Ihre E-Mail-Adresse ein", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                DecimalFormat euro = new DecimalFormat("###,###.00€");
 
 
-                Intent vertragIntent = getIntent();
-                double rate = vertragIntent.getDoubleExtra( "Rate", 1 );
-                int kreditlaufzeit = vertragIntent.getIntExtra("Kreditlaufzeit", 1);
-                double kreditsumme = vertragIntent.getFloatExtra("Kreditbetrag", 1);
-                String Tilgungsform = vertragIntent.getStringExtra("Tilgungsform");
-                int kreditprozentfloat = vertragIntent.getIntExtra("Kreditprozent", 1);
 
-                String smartphonekonditionen =  "\n\nMeine\tWunsch-Leistung:" +
+                String smartphonekonditionen =  "\n \n Meine Versicherungskonditionen:\n" +
                         "\n" + "Hersteller:\t" + hersteller +
                         "\n" + "Alter:\t" + alter +
                         "\n" + "Diebstalschutz:\t" + diebstahl +
@@ -111,7 +96,7 @@ public class BeratungHandyActivity extends AppCompatActivity implements View.OnC
                         "eine\tDirektberatung\tvereinbaren.\n\nMeine\tpersönliche\tDaten:\n\n" +
                         "Name:\t" + nameString + "\t" + lastnameString +
                         "\nGeburtsdatum:\t" + picker.getDayOfMonth()  +"."+  picker.getMonth()+"."+ picker.getYear() +
-                        "\nE-Mail-Adresse:\t" + mailString +
+                        "\nE-Mail-Adresse:\t" + mailSignin +
                         smartphonekonditionen +
                         "Mit\tfreundlichen\tGrüßen" + "\n\n" + nameString);
                 try {

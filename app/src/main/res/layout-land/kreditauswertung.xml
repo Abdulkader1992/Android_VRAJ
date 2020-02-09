@@ -1,177 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    tools:ignore="MissingDefaultResource"
-    android:background="#fff">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:background="#fff">
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="#fff"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/imageHandy"
-                android:layout_width="210dp"
-                android:layout_height="200dp"
-                android:background="@drawable/bg2" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#eee">
+            android:gravity="center">
 
-            <LinearLayout
+
+            <TextView
+                android:id="@+id/head1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="5sp">
-
-                <TextView
-                    android:id="@+id/kreditsummetext"
-                    android:layout_marginBottom="20dp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textSize="20sp"
-                    android:paddingLeft="10dp"
-                    android:text="@string/creditvolume"/>
-
-                <TextView
-                    android:id="@+id/kreditsumme"
-                    android:layout_marginLeft="120sp"
-                    android:layout_marginBottom="20dp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textSize="20sp"
-                    android:text="Ergebnis 1"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
-
-                <TextView
-                    android:id="@+id/prozenttext"
-                    android:layout_marginBottom="20dp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textSize="20sp"
-                    android:text="@string/annualpercentagerate"
-                    android:paddingLeft="10dp"/>
-
-                <TextView
-                    android:id="@+id/prozent"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginLeft="120sp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textSize="20sp"
-                    android:text="Ergebnis 2"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
-
-                <TextView
-                    android:id="@+id/persönlicheLaufzeittext"
-                    android:layout_marginBottom="20dp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textSize="20sp"
-                    android:paddingLeft="10dp"
-                    android:text="@string/creditperiod"/>
-
-                <TextView
-                    android:id="@+id/persönlicheLaufzeit"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginLeft="120sp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textSize="20sp"
-                    android:text="Ergebnis 3"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
-
-                <TextView
-                    android:id="@+id/ratentext"
-                    android:layout_marginBottom="20dp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textSize="20sp"
-                    android:paddingLeft="10dp"/>
-
-                <TextView
-                    android:id="@+id/rate"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginLeft="120sp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textSize="20sp"
-                    android:text="Ergebnis 4" />
-
-            </LinearLayout>
-
-
-
-            </LinearLayout>
-        <TableLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center">
-
-            <Button
-                android:id="@+id/tilgungsplan"
-                android:layout_marginTop="30dp"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/gradient_button"
-                android:textSize="20dp"
-                android:textAllCaps="false"
+                android:gravity="center"
                 android:textColor="#000"
-                android:text="@string/createrepaymentplan"/>
-
-            <Button
-                android:id="@+id/abschlissen"
-                android:layout_marginTop="20dp"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/gradient_button"
-                android:text="@string/contract_send"
                 android:textSize="20dp"
+                android:text="@string/selectionofservices"
+                android:layout_marginBottom="60dp"
+                android:layout_marginTop="60dp"
+                android:background="#eee"/>
+
+            <!-- Background Photos-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="210dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/bg1"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/bg2"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="100dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/versicherung"
+                    android:layout_width="180dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/mobilephoneinsurance"
+                    android:textAllCaps="false"
+                    android:textSize="25dp"
+                    android:background="@drawable/gradient_button"/>
+
+                <Button
+                    android:id="@+id/kredit"
+                    android:layout_width="180dp"
+                    android:layout_height="100dp"
+                    android:text="@string/credit"
+                    android:textAllCaps="false"
+                    android:textSize="25dp"
+                    android:background="@drawable/gradient_button"/>
+
+            </LinearLayout>
+
+            <Button android:id="@+id/btnWe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:textAllCaps="false"
-                android:textColor="#000"
-                android:padding="10sp"/>
-        </TableLayout>
+                android:text="@string/aboutus"
+                android:layout_marginTop="10dp"
+                android:background="#aaa"/>
 
         </LinearLayout>
-
-</ScrollView>
+    </ScrollView>
+</LinearLayout>

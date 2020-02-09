@@ -9,6 +9,16 @@
         <item>Huawei</item>
         <item>IPhone</item>
         <item>Samsung</item>
+        <item>Nokia</item>
+        <item>Motorela</item>
+        <item>Wiko</item>
+        <item>HTC</item>
+        <item>LG</item>
+        <item>OnePlus</item>
+        <item>Oppo</item>
+        <item>Sony</item>
+        <item>Vivo</item>
+        <item>ZTE</item>
 
     </string-array>
 
@@ -91,8 +101,8 @@
     <string name="theft_protection">Diebstahlschutz </string>
     <string name="tp">DsV </string>
     <string name="Purchase_price">Kaufpreis in €</string>
-    <string name="next_button">Weiter</string>
-    <string name="back_button">Zurück</string>
+    <string name="next_button">weiter</string>
+    <string name="back_button">zurück</string>
     <string name="info_questions">- Welche Schäden deckt VRAJ-Versicherung ab?
                         \n- Bei wem melde ich einen Schaden?
                         \n- Wie lange dauert die Bearbeitung eines Schadenfalls?
@@ -101,12 +111,12 @@
     <string name="result">Ergebnis</string>
     <string name="monthly">monatlich: </string>
     <string name="singup_subject">Registrierung</string>
-    <string name="e_mail">mustermann@gmail.de</string>
+    <string name="e_mail">benutzername@example.de</string>
     <string name="mail">E-Mail</string>
     <string name="password">Kennwort</string>
     <string name="password_r">Kennwort wiederholen</string>
     <string name="registration">Anmeldung</string>
-    <string name="registrating">Anmelden</string>
+    <string name="registrating">anmelden</string>
     <string name="have_not_count">Haben Sie kein Konto? </string>
     <string name="contract_send">Beratungstermin ausmachen</string>
     <string name="c_subject">Beratungsanfrage</string>
@@ -120,7 +130,7 @@
         \n<b>Unsere Leistungen:</b>
         \  - Handyversicherung - Kredit
         \n
-        \n<b>*Handyversicherung:</b>
+        \n<b><font fgcolor="#ff9a1d1d">Handyversicherung:</font></b>
         \n
         \n  <b>- Display- und Bruchschäden: Displaybruch </b>ist der häufigste Handy Schaden. Dabei fällt das Handy auch meist nicht direkt aus der Hand.
         \n  - Flüssigkeitsschäden: Bei Flüssigkeitsschäden oder Wasserschäden gibt es die glimpflichen Situationen, in denen der Bildschirm trocken gewischt wird und alles noch funktioniert. Aber dann sind da noch die Situationen, in denen das Handy ein Vollbad genommen hat und nicht mehr reagiert. Oft enden diese in einem Total Schaden
@@ -128,26 +138,26 @@
         \n
         \n<b>Häufige Fragen:</b>
         \n
-        \n<b>*Bei wem melde ich einen Schaden?</b>
+        \n<b><font fgcolor="#ff9a1d1d">Bei wem melde ich einen Schaden?</font></b>
         \n  - Sie können sich direkt bei uns melden, unter <b>+49 15771931956 - +49 15776441106</b> oder per E-Mail <b>ebdo93@gmail.com  - juergen-mayer.1@gmx.de</b>
         \n
-        \n<b>*Was ist zu beachten, wenn ich als versicherte Person nicht der Käufer des Handys bin?</b>
+        \n<b><font fgcolor="#ff9a1d1d">Was ist zu beachten, wenn ich als versicherte Person nicht der Käufer des Handys bin?</font></b>
         \n  - Unterscheiden sich versicherte Person und Käufer, so benötigen wir hierfür eine schriftliche Erklärung. In dieser muss der Käufer des Gerätes versichern, dass das Handy von der versicherten Person genutzt wird.
         \n
-        \n<b>*Welche Schäden deckt eine Handyversicherung ab?</b>
+        \n<b><font fgcolor="#ff9a1d1d">Welche Schäden deckt eine Handyversicherung ab?</font></b>
         \n  - Welche Schäden genau von der Handyversicherung abgedeckt werden, hängt von dem gewählten Tarif ab. In der Regel versichert:
         \n  - Display- und Bruchschäden
         \n  - Schäden durch Überspannung, Brand und Flüssigkeit.
         \n
-        \n<b>*Wie lange dauert die Bearbeitung eines Schadensfalls?</b>
+        \n<b><font fgcolor="#ff9a1d1d">Wie lange dauert die Bearbeitung eines Schadensfalls?</font></b>
         \n  - Unsere Versicherer arbeiten mit unterschiedlichen Reparaturdienstleistern. Die Reparatur dauert, abhängig vom Anbieter, zwischen zwei bis zehn Werktage. Sie können uns helfen, diese Zeit zu verkürzen, indem Sie uns direkt alle notwendigen Unterlagen – zum Beispiel Kaufbeleg und Schadensmeldung – zusammen mit dem defekten Gerät einsenden. Details hierzu entnehmen Sie bitte der Anleitung, die wir Ihnen im Schadensfall zukommen lassen.
         \n
         \n
-        \n<b>Wichtig: Damit Ihr Schaden schnellstmöglich bearbeitet wird und Sie Ihr Handy schnell wieder benutzen können, sollten Sie ihn umgehend der Handyversicherung melden. Generell haben Sie laut Handy Schutzbrief von Assurant Solutions die Pflicht, diesen bis 14 Tage nach Entdecken zu melden. Sonst ist die Versicherung nicht verpflichtet, den Schaden zu regulieren.</b>
+        \n<b><font fgcolor="#ff0000">Wichtig: Damit Ihr Schaden schnellstmöglich bearbeitet wird und Sie Ihr Handy schnell wieder benutzen können, sollten Sie ihn umgehend der Handyversicherung melden. Generell haben Sie laut Handy Schutzbrief von Assurant Solutions die Pflicht, diesen bis 14 Tage nach Entdecken zu melden. Sonst ist die Versicherung nicht verpflichtet, den Schaden zu regulieren.</font></b>
         \n
-        \n<b>*Kredit</b>
+        \n<b><font fgcolor="#0000ff">Kredit</font></b>
         \n
-        \n<b>Was ist der Unterschied zwischen Tilungs- und Annuitätendarlehnen?</b>
+        \n<b><font fgcolor="#0000ff">Was ist der Unterschied zwischen Tilungs- und Annuitätendarlehnen?</font></b>
         \n
         \n Bei einem Annuitäten Darlehen ist die Summe, die man nach einem bestimmten Intervall zurückzahlen muss, zu jeder Zeit gleich.\n
          Bei einem Tilgungsdarlehen dagegen ist der Tilgungsbetrag immer gleich. \n
@@ -162,25 +172,25 @@
         \n
         \n <b>Vor- und Nachteile der Tilgungsformen</b> \n
         \n
-        <b>Vorteile Tilgung</b>\n
+        <b><font fgcolor="#0000ff">Vorteile Tilgung</font></b>\n
         \n
         - Der Tilgungsdarlehen ist im Vergleich zum Annuiätendarlehnen günstiger. \n
         \n
         - Der Tilgungsbetrag ist von Anfang höher, was schlussendlich dazu führt, dass man weniger Zinsen zurückzahlen muss. \n
         \n
-        <b>Nachteile Tilgung</b> \n
+        <b><font fgcolor="#0000ff">Nachteile Tilgung</font></b> \n
         \n
         Die Rate die man in einem bestimmten Intervall an die Bank zurück zahlen muss, ist nicht immer gleich! Was schlechtere Planungssicherheit bringt. \n
         \n
         - Die finanzielle Belastung ist am Anfang höher als bei dem Annuiätendarlehen, was sich aber mit dem weiteren Verlauf aber umkehrt. \n
         \n
-        <b>Vorteile Annuität</b> \n
+        <b><font fgcolor="#0000ff">Vorteile Annuität</font></b> \n
         \n
         - Die Ratenzahlung, besser gesagt die Annuität, die man an die Bank zurückzahlt, ist immer gleich! Was zu Planungssicherheit führt. \n
         \n
         - Die anfängliche Belastung ist im Vergleich zum Tilgungsdarlehen geringer, was sich allerdings mit der Zeit umgekehrt. \n
         \n
-        <b>Nachteile Annuität</b> \n
+        <b><font fgcolor="#0000ff">Nachteile Annuität</font></b> \n
         \n
         - Die Annuiätendarlehen ist teurer als der Tilgungsdarlehen!
     </string>

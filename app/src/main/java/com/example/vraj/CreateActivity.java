@@ -31,11 +31,11 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
         btnCreate.setOnClickListener(this);
     }
     private void createPdf(String sometext) {
-        // createD a new document
+
         PdfDocument document = new PdfDocument();
-        // crate a page description
+
         PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(300, 600, 1).create();
-        // start a page
+
         PdfDocument.Page page = document.startPage(pageInfo);
         Canvas canvas = page.getCanvas();
         Paint paint = new Paint();
@@ -43,11 +43,9 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
         canvas.drawCircle(50, 50, 30, paint);
         paint.setColor(Color.BLACK);
         canvas.drawText(sometext, 80, 50, paint);
-        //canvas.drawt
-        // finish the page
+
         document.finishPage(page);
-// draw text on the graphics object of the page
-        // Create Page 2
+
         pageInfo = new PdfDocument.PageInfo.Builder(300, 600, 2).create();
         page = document.startPage(pageInfo);
         canvas = page.getCanvas();
@@ -55,7 +53,7 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
         paint.setColor(Color.BLUE);
         canvas.drawCircle(100, 100, 100, paint);
         document.finishPage(page);
-        // write the document content
+
 
 
         String directory_path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Dir";
@@ -73,7 +71,7 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
             Log.e("main", "error " + e.toString());
             Toast.makeText(this, "Something wrong: " + e.toString(), Toast.LENGTH_LONG).show();
         }
-        // close the document
+
         document.close();
     }
 

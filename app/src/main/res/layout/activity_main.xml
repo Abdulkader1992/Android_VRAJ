@@ -1,84 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
     android:gravity="center"
-    android:background="#fff">
+    android:background="#fff"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-
-    <TextView
-        android:id="@+id/betreff"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:textColor="#000"
-        android:textSize="40sp"
-        android:text="@string/app_name"
-        android:layout_marginBottom="60dp"
-        android:background="#eee"/>
-
-    <!-- Background Photos-->
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_width="210dp"
-            android:layout_height="200dp"
-            android:background="@drawable/bg1"/>
-
-        <ImageView
+        android:layout_height="match_parent">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@drawable/bg2"/>
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/betreff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="70dp"
+                android:background="@drawable/logo_innen"/>
 
-                                        <!--Anmelden Button-->
+            <!--Anmelden Button-->
+            <Button
+                android:id="@+id/btnSingIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/gradient_button"
+                android:text="@string/signup"
+                android:textAllCaps="false"
+                android:textSize="20dp" />
 
-        <Button
-            android:id="@+id/btnSingIn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:background="#7EE0F1"
-            android:text="@string/signup"
-            android:textAllCaps="false"
-            android:textSize="26dp" />
+            <Button android:id="@+id/btnClose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/shutdownapp"
+                android:textAllCaps="false"
+                android:layout_marginTop="5dp"
+                android:textSize="20dp"
+                android:background="@drawable/gradient_button"/>
+            <!--Fusszeile Button-->
 
-    <Button
-        android:id="@+id/btnWithoutSingIn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:layout_marginTop="5dp"
-        android:textSize="26dp"
-        android:background="#00BCD4"
-        android:text="@string/withoutregistration"/>
-                                                                                <!--Schliessen Button-->
-    <Button android:id="@+id/btnClose"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/shutdownapp"
-        android:textAllCaps="false"
-        android:layout_marginTop="5dp"
-        android:textSize="26dp"
-        android:background="#08798D"/>
-                                                                                <!--Fusszeile Button-->
-
-    <Button android:id="@+id/btnWe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="@string/aboutus"
-        android:layout_marginTop="10dp"
-        android:background="#aaa"/>
-
+            <Button android:id="@+id/btnWe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="@string/aboutus"
+                android:layout_marginTop="10dp"
+                android:background="#aaa"/>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
-</ScrollView>

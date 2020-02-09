@@ -10,8 +10,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.text.DecimalFormat;
-
 
 public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements View.OnClickListener{
 
@@ -47,6 +45,46 @@ public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements
         double herstellerErgebnis = 0;
 
         switch (hersteller) {
+            case "Nokia":
+                //Toast.makeText(this, hersteller, Toast.LENGTH_SHORT).show();
+                herstellerErgebnis = 1;
+                break;
+            case "Motorela":
+                //Toast.makeText(this, hersteller, Toast.LENGTH_SHORT).show();
+                herstellerErgebnis = 2;
+                break;
+            case "Wiko":
+                //Toast.makeText(this, hersteller, Toast.LENGTH_SHORT).show();
+                herstellerErgebnis = 1;
+                break;
+            case "HTC":
+                //Toast.makeText(this, hersteller, Toast.LENGTH_SHORT).show();
+                herstellerErgebnis = 2;
+                break;
+            case "LG":
+                //Toast.makeText(this, hersteller, Toast.LENGTH_SHORT).show();
+                herstellerErgebnis = 2;
+                break;
+            case "OnePlus":
+                //Toast.makeText(this, hersteller, Toast.LENGTH_SHORT).show();
+                herstellerErgebnis = 2;
+                break;
+            case "Oppo":
+                //Toast.makeText(this, hersteller, Toast.LENGTH_SHORT).show();
+                herstellerErgebnis = 1;
+                break;
+            case "Sony":
+                //Toast.makeText(this, hersteller, Toast.LENGTH_SHORT).show();
+                herstellerErgebnis = 3;
+                break;
+            case "Vivo":
+                //Toast.makeText(this, hersteller, Toast.LENGTH_SHORT).show();
+                herstellerErgebnis = 1;
+                break;
+            case "ZTE":
+                //Toast.makeText(this, hersteller, Toast.LENGTH_SHORT).show();
+                herstellerErgebnis = 2;
+                break;
             case "Huawei":
                 //Toast.makeText(this, hersteller, Toast.LENGTH_SHORT).show();
                 herstellerErgebnis = 1;
@@ -117,7 +155,7 @@ public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements
             switch (v.getId()) {
                 case R.id.btnSubmit:
 
-                    if (herstellerAuswahl() == 1) // HUAWEI ************************************
+                    if (herstellerAuswahl() == 1) //  ************************************
                     {
                         if (alterAuswahl() == 1)  // weniger als einen Monat----------
                         {
@@ -149,7 +187,7 @@ public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements
                             }
                         }
 
-                    } else if (herstellerAuswahl() == 2) // SAMSUNG ******************************+
+                    } else if (herstellerAuswahl() == 2) //  ******************************+
                     {
                         if (alterAuswahl() == 1)  // weniger als einen Monat----------
                         {
@@ -180,7 +218,7 @@ public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements
                                 versicherung = (preisZahl * (0.018)); // Formel                                                 §
                             }
                         }
-                    } else if (herstellerAuswahl() == 3) // IPhone ********************************
+                    } else if (herstellerAuswahl() == 3) //  ********************************
                     {
                         if (alterAuswahl() == 1)  // weniger als einen Monat----------
                         {
@@ -268,7 +306,6 @@ public class SmartphoneVersicherungAcitvity extends AppCompatActivity implements
     {
         //VersicherungErgebnisse anzeigen
 
-        DecimalFormat euro = new DecimalFormat("###,###.00€");
         double ergebnis = Math.round(versicherung * 100) / 100.0;
         return (ergebnis);
     }

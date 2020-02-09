@@ -31,13 +31,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#eee"
-            android:layout_gravity="center">
+            android:background="#eee">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:layout_marginTop="5sp">
 
                 <TextView
@@ -50,23 +48,22 @@
                     android:paddingLeft="10dp"
                     android:text="@string/manufacturer"/>
 
+
+
                 <TextView
                     android:id="@+id/view12"
-
-                android:layout_marginBottom="20dp"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                    android:layout_marginLeft="120sp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
                     android:textColor="#000"
-                android:textSize="20sp"
-                    android:paddingLeft="10dp"
+                    android:textSize="20sp"
                     android:text="@string/result"/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/viewl2"
@@ -81,7 +78,7 @@
                 <TextView
                     android:id="@+id/view22"
                     android:layout_marginBottom="20dp"
-                    android:layout_marginLeft="120sp"
+                    android:layout_marginLeft="50dp"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:textColor="#000"
@@ -92,8 +89,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/view31"
@@ -108,7 +104,7 @@
                 <TextView
                     android:id="@+id/view32"
                     android:layout_marginBottom="20dp"
-                    android:layout_marginLeft="120sp"
+                    android:layout_marginLeft="50dp"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:textColor="#000"
@@ -119,8 +115,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/view41"
@@ -135,7 +130,7 @@
                 <TextView
                     android:id="@+id/view42"
                     android:layout_marginBottom="20dp"
-                    android:layout_marginLeft="120sp"
+                    android:layout_marginLeft="50dp"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:textColor="#000"
@@ -145,40 +140,37 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:layout_width="350dp"
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/view51"
+                    android:layout_marginTop="50dp"
                     android:layout_marginBottom="20dp"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:textColor="#000"
                     android:textSize="20sp"
                     android:paddingLeft="10dp"
-                    android:text="monatlich"/>
+                    android:text="@string/monthly"/>
 
                 <TextView
                     android:id="@+id/view52"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginLeft="120sp"
-                    android:layout_width="150dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:text="@string/result"
                     android:textColor="#000"
-                    android:textSize="20sp"
-                    android:text="Ergebnis"/>
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
-
         </LinearLayout>
-
-
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/abschlissen"
@@ -192,7 +184,6 @@
                 android:textAllCaps="false"
                 android:textColor="#000"/>
         </LinearLayout>
-
 
         <TextView
             android:layout_width="350dp"

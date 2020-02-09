@@ -17,12 +17,11 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.DecimalFormat;
 
-@SuppressWarnings("deprecation")//
 public class BeratungKreditActivity extends AppCompatActivity implements View.OnClickListener {
 
-    EditText nameJ, lastnameJ, dateJ, mailJ;
+    EditText nameJ, lastnameJ;
     Button nextJ, backJ;
-    String nameString, lastnameString, mailString;
+    String nameString, lastnameString, mailSignin;
     DatePicker picker;
 
     private Intent vertragIntent;
@@ -37,7 +36,6 @@ public class BeratungKreditActivity extends AppCompatActivity implements View.On
         setContentView(R.layout.beratung);
         nameJ = (EditText) this.findViewById(R.id.vornameEingabe);
         lastnameJ = (EditText) this.findViewById(R.id.nachnameEingabe);
-        mailJ = (EditText) this.findViewById(R.id.emailVEingabe);
         nextJ = (Button) this.findViewById(R.id.nextV);
         backJ = (Button) this.findViewById(R.id.backV);
         picker = (DatePicker) this.findViewById(R.id.datePicker1);
@@ -61,7 +59,7 @@ public class BeratungKreditActivity extends AppCompatActivity implements View.On
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         nameString = nameJ.getText().toString().trim();
         lastnameString = lastnameJ.getText().toString().trim();
-        mailString = mailJ.getText().toString().trim();
+        mailSignin = SigninActivity.getEmail();
     }
 
     public void onClick(View v) {
@@ -78,10 +76,6 @@ public class BeratungKreditActivity extends AppCompatActivity implements View.On
                 if (TextUtils.isEmpty(lastnameString))
                 {
                     Toast.makeText(this, "Bitte geben Sie Ihr Nachname ein", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if (TextUtils.isEmpty(mailString)) {
-                    Toast.makeText(this, "Bitte geben Sie Ihre E-Mail-Adresse ein", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -110,7 +104,7 @@ public class BeratungKreditActivity extends AppCompatActivity implements View.On
                         "eine\tDirektberatung\tvereinbaren.\n\nMeine\tpersönliche\tDaten:\n\n" +
                         "Name:\t" + nameString + "\t" + lastnameString +
                         "\nGeburtsdatum:\t" + picker.getDayOfMonth() + "." + picker.getMonth() + "." + picker.getYear() +
-                        "\nE-Mail-Adresse:\t" + mailString +
+                        "\nE-Mail-Adresse:\t" + mailSignin +
                         kreditkonditionen +
                         "\n\nVielen\tDank.\n\n" +
 

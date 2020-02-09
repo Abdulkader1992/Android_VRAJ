@@ -1,123 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-<LinearLayout
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:layout_gravity="center"
-    android:gravity="center"
-    android:background="@android:drawable/sym_action_email">
-
-    <TextView
-        android:id="@+id/anmeldungBetreff"
-        android:layout_width="wrap_content"
-        android:layout_height="66dp"
-        android:layout_marginTop="60dp"
-        android:gravity="center"
-        android:textColor="#000"
-        android:textSize="40sp"
-        android:text="@string/singup_subject"
-        android:layout_marginBottom="60dp"
-        android:background="#eee"/>
-
-    <LinearLayout
-        android:layout_width="350dp"
-        android:layout_height="fill_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/userEingabe"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="30dp"
-            android:textColor="#000"
-            android:textSize="20sp"
-            android:text="@string/mail"/>
-
-        <EditText
-            android:id="@+id/ediUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:ems="30"
-            android:hint="@string/e_mail" />
-
-        <TextView
-            android:id="@+id/passEingabe"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="30dp"
-            android:textColor="#000"
-            android:textSize="20sp"
-            android:text="@string/password"/>
-
-        <EditText
-            android:id="@+id/ediPass"
-            android:inputType="textPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:ems="30"
-            android:hint="@string/password" />
-
-        <TextView
-            android:id="@+id/passEingabe2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="30dp"
-            android:textColor="#000"
-            android:textSize="20sp"
-            android:text="@string/password_r"/>
-
-        <EditText
-            android:id="@+id/ediPass2"
-            android:inputType="textPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:ems="30"
-            android:hint="@string/password_r"/>
-
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-            <Button
-                android:id="@+id/backB"
-                style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/back_button"
-                android:textAllCaps="false"
-                android:layout_below="@+id/editText5"
-                android:layout_alignEnd="@+id/editText5"
-                android:enabled="true" />
+            android:layout_marginTop="50dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@android:drawable/sym_action_email">
 
-            <Button
-                android:id="@+id/next"
-                style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+            <TextView
+                android:id="@+id/anmeldungBetreff"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="170dp"
-                android:text="@string/next_button"
-                android:textAllCaps="false"
-                android:layout_below="@+id/editText5"
-                android:layout_alignEnd="@+id/editText5"
-                android:enabled="true" />
+                android:layout_height="66dp"
+                android:layout_marginTop="60dp"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="40sp"
+                android:text="@string/singup_subject"
+                android:layout_marginBottom="60dp"
+                android:background="#eee"/>
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/userEingabe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="@string/mail"/>
+
+                <EditText
+                    android:id="@+id/ediUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:ems="30"
+                    android:hint="@string/e_mail" />
+
+                <TextView
+                    android:id="@+id/passEingabe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="@string/password"/>
+
+                <EditText
+                    android:id="@+id/ediPass"
+                    android:inputType="textPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:ems="30"
+                    android:hint="@string/password" />
+
+                <TextView
+                    android:id="@+id/passEingabe2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="@string/password_r"/>
+
+                <EditText
+                    android:id="@+id/ediPass2"
+                    android:inputType="textPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:ems="30"
+                    android:hint="@string/password_r"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <Button
+                        android:id="@+id/backB"
+                        style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/back_button"
+                        android:textAllCaps="false"
+                        android:layout_below="@+id/editText5"
+                        android:layout_alignEnd="@+id/editText5"
+                        android:enabled="true" />
+
+                    <Button
+                        android:id="@+id/next"
+                        style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="170dp"
+                        android:text="@string/next_button"
+                        android:textAllCaps="false"
+                        android:layout_below="@+id/editText5"
+                        android:layout_alignEnd="@+id/editText5"
+                        android:enabled="true" />
+                </LinearLayout>
+
+            </LinearLayout>
+
         </LinearLayout>
-
-    </LinearLayout>
-
-</LinearLayout>
-</ScrollView>
+    </ScrollView>
