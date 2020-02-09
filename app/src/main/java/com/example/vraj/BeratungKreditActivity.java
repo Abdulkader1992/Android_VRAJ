@@ -40,7 +40,6 @@ public class BeratungKreditActivity extends AppCompatActivity implements View.On
         nextJ = (Button) this.findViewById(R.id.nextV);
         backJ = (Button) this.findViewById(R.id.backV);
         picker = (DatePicker) this.findViewById(R.id.datePicker1);
-        pickerMonth = picker.getMonth();
 
         vertragIntent = getIntent();
         double rate = vertragIntent.getDoubleExtra("Rate", 1);
@@ -96,7 +95,7 @@ public class BeratungKreditActivity extends AppCompatActivity implements View.On
 
 
 
-
+                pickerMonth = picker.getMonth()+1;
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("message/rfc822");
                 i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"ebdo93@gmail.com","juergen-mayer.1@gmx.de"});

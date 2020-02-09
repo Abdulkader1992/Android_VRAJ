@@ -39,7 +39,6 @@ public class BeratungHandyActivity extends AppCompatActivity implements View.OnC
         nextJ = (Button) this.findViewById(R.id.nextV);
         backJ = (Button) this.findViewById(R.id.backV);
         picker = (DatePicker) this.findViewById(R.id.datePicker1);
-        pickerMonth = picker.getMonth();
 
 
         nextJ.setOnClickListener(this);
@@ -88,6 +87,8 @@ public class BeratungHandyActivity extends AppCompatActivity implements View.OnC
                         "\n" + "Zahlung:\t" + zahlung +
                         "\n\nVielen\tDank.\n\n";
 
+
+                pickerMonth = picker.getMonth()+1;
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("message/rfc822");
                 i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"ebdo93@gmail.com","juergen-mayer.1@gmx.de"});
