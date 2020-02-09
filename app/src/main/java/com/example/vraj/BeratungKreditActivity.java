@@ -23,6 +23,7 @@ public class BeratungKreditActivity extends AppCompatActivity implements View.On
     Button nextJ, backJ;
     String nameString, lastnameString, mailSignin;
     DatePicker picker;
+    int pickerMonth;
 
     private Intent vertragIntent;
 
@@ -39,6 +40,7 @@ public class BeratungKreditActivity extends AppCompatActivity implements View.On
         nextJ = (Button) this.findViewById(R.id.nextV);
         backJ = (Button) this.findViewById(R.id.backV);
         picker = (DatePicker) this.findViewById(R.id.datePicker1);
+        pickerMonth = picker.getMonth();
 
         vertragIntent = getIntent();
         double rate = vertragIntent.getDoubleExtra("Rate", 1);
@@ -103,7 +105,7 @@ public class BeratungKreditActivity extends AppCompatActivity implements View.On
                         "hiermit\tmöchte\tich\tfür\tdie\tkommenden\tTage\teinen\tverbindlichen\tBeratungstermin\tfür\t\n" +
                         "eine\tDirektberatung\tvereinbaren.\n\nMeine\tpersönliche\tDaten:\n\n" +
                         "Name:\t" + nameString + "\t" + lastnameString +
-                        "\nGeburtsdatum:\t" + picker.getDayOfMonth() + "." + picker.getMonth() + "." + picker.getYear() +
+                        "\nGeburtsdatum:\t" + picker.getDayOfMonth() + "." + pickerMonth + "." + picker.getYear() +
                         "\nE-Mail-Adresse:\t" + mailSignin +
                         kreditkonditionen +
                         "\n\nVielen\tDank.\n\n" +

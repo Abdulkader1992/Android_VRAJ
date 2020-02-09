@@ -24,7 +24,7 @@ public class BeratungHandyActivity extends AppCompatActivity implements View.OnC
     DatePicker picker;
     Button nextJ, backJ;
     String nameString, lastnameString , mailSignin;
-
+    int pickerMonth;
     private String hersteller,alter,diebstahl,kaufpreis,zahlung;
 
     private FirebaseAuth auth;
@@ -39,6 +39,7 @@ public class BeratungHandyActivity extends AppCompatActivity implements View.OnC
         nextJ = (Button) this.findViewById(R.id.nextV);
         backJ = (Button) this.findViewById(R.id.backV);
         picker = (DatePicker) this.findViewById(R.id.datePicker1);
+        pickerMonth = picker.getMonth();
 
 
         nextJ.setOnClickListener(this);
@@ -95,7 +96,7 @@ public class BeratungHandyActivity extends AppCompatActivity implements View.OnC
                         "hiermit\tmöchte\tich\tfür\tdie\tkommenden\tTage\teinen\tverbindlichen\tBeratungstermin\tfür\t\n" +
                         "eine\tDirektberatung\tvereinbaren.\n\nMeine\tpersönliche\tDaten:\n\n" +
                         "Name:\t" + nameString + "\t" + lastnameString +
-                        "\nGeburtsdatum:\t" + picker.getDayOfMonth()  +"."+  picker.getMonth()+"."+ picker.getYear() +
+                        "\nGeburtsdatum:\t" + picker.getDayOfMonth()  +"."+ pickerMonth+"."+ picker.getYear() +
                         "\nE-Mail-Adresse:\t" + mailSignin +
                         smartphonekonditionen +
                         "Mit\tfreundlichen\tGrüßen" + "\n\n" + nameString);
