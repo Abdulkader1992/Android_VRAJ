@@ -63,13 +63,15 @@ public class TilgungsPlanActivity extends AppCompatActivity {
             annuitat = tilgungsplanintent.getDoubleExtra("Rate", 1);
         }
 
+        // Ab hier beginnt die Erstellung des Tilgungsplan
         for (int i = kreditlaufzeit; i >= 1; i--) {
-            // Creation row
+            // Erstellung einer Zeile
             final TableRow tableRow = new TableRow(this);
             tableRow.setGravity(CENTER);
             tableRow.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.MarginLayoutParams.WRAP_CONTENT));
             jahr++;
 
+            // Die 5 beschreibt die Anzahl der Spalten
             for (int j = 0; j < 5; j++) {
 
                 final TextView text = new TextView(this);
@@ -89,7 +91,7 @@ public class TilgungsPlanActivity extends AppCompatActivity {
 
 
 
-
+                // Die Arrays innerhalb der Cases wird dazu benötigt um die Einzel Ergebnisse später als Bar Chart auszugeben.
                 switch(j){
                     case 0:
                         text.setText(String.valueOf((jahr)));
