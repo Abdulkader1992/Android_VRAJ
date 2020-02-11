@@ -32,7 +32,7 @@
 
             <!-- Background Photos-->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -48,7 +48,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_marginBottom="100dp"
@@ -61,7 +61,8 @@
                     android:layout_marginRight="10dp"
                     android:text="@string/mobilephoneinsurance"
                     android:textAllCaps="false"
-                    android:textSize="25dp" />
+                    android:textSize="25dp"
+                    android:background="@drawable/gradient_button"/>
 
                 <Button
                     android:id="@+id/kredit"
@@ -69,7 +70,8 @@
                     android:layout_height="100dp"
                     android:text="@string/credit"
                     android:textAllCaps="false"
-                    android:textSize="25dp" />
+                    android:textSize="25dp"
+                    android:background="@drawable/gradient_button"/>
 
             </LinearLayout>
 
